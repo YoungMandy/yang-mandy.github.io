@@ -7,4 +7,5 @@ export default defineConfig({
   build: {
     outDir: '../docs/react-docs',
   },
+  base: 'https://youngmandy.github.io/react-docs/',
 });

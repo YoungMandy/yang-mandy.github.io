@@ -1,10 +1,10 @@
 {
-  "name": "oh-frontend",
+  "name": "react",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "vite dev --open",
+    "dev": "vite dev --open",
     "build": "vite build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
