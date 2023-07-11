@@ -202,7 +202,7 @@ $bg-color: rgb(24, 144, 255);
   .border-mixin {
     background-color: aqua;
     border-style: solid;
-    border-color: blue;
+    border-color: #4799a8;
   }
   .ant-form-inline .ant-form-item {
     margin-bottom: 16px;
