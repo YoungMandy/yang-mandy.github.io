@@ -59,14 +59,6 @@ onMounted(() => {
           width的作用范围是content-box,所以整个盒子的宽度 = width + padding * 2
           + border * 2
           <a-form class="control-form" layout="inline" :model="standardBox">
-            <a-form-item label="margin值(div的宽度计算不含margin):">
-              <a-input
-                v-model:value="standardBox.margin"
-                @change="calculateWidth('standard-box')"
-                placeholder="margin"
-              >
-              </a-input>
-            </a-form-item>
             <a-form-item label="border值:">
               <a-input
                 v-model:value="standardBox.border"
@@ -123,14 +115,6 @@ onMounted(() => {
           width的作用范围是border-box,所以整个盒子的宽度 = width值;
 
           <a-form class="control-form" layout="inline" :model="ieBox">
-            <a-form-item label="margin值(div的宽度计算不含margin):">
-              <a-input
-                v-model:value="ieBox.margin"
-                @change="calculateWidth('ie-box')"
-                placeholder="margin"
-              >
-              </a-input>
-            </a-form-item>
             <a-form-item label="border值:">
               <a-input
                 v-model:value="ieBox.border"
