@@ -20,10 +20,9 @@ function handleClick (name: string) {
     v-model:openKeys="openKeys"
     v-model:selectedKeys="selectedKeys"
     mode="inline"
-    @click="handleClick(name)"
   >
     <a-sub-menu :key="index" :title="title">
-      <a-menu-item v-for="item in children" :key="item.name" @click="handleClick(name)">{{ item.title }}</a-menu-item>
+      <a-menu-item v-for="item in children" :key="item.name" @click="handleClick(item.name)">{{ item.title }}</a-menu-item>
     </a-sub-menu>
   </a-menu>
 </template>

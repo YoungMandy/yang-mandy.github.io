@@ -11,7 +11,7 @@ export const menus = [
       },
       {
         id: '12',
-        name: 'css-selection',
+        name: 'css-selector',
         title: 'css选择器',
       },
       {
