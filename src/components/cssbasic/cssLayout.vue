@@ -33,7 +33,7 @@ const rulesRef = reactive({
     }
   ]
 })
-const options = [...Array(25)].map((_, i) => ({ value: (i + 10).toString(36) + (i + 1) })) ;
+const options = [...Array(25)].map((_, i) => ({ value: (i + 10000).toString(36) + (i + 1) })) ;
 
 const { resetFields, validate, validateInfos } = useForm(modelRef, rulesRef);
 const onSubmit = () => {
@@ -72,8 +72,10 @@ const deleteItem = () => {
           >vuedraggable</a>
           <table class="draggable-table">
             <thead class="left-index">
-              <td v-for="{},index in tableFormList" class="index-wrapper">
-                <div class="circle-index">{{ index }}</div>
+              <td v-for="{},index in tableFormList"  :class="{'index-wrapper':tableFormList.length > 1}" >
+                <div class="circle-index">
+                  <div class="slot-box">{{ index+ 1 }}</div>
+                </div>
               </td>
             </thead>
                <draggable  v-model="tableFormList" item-key="id" tag="tr" handle=".handle">
@@ -129,6 +131,7 @@ const deleteItem = () => {
 
 </template>
 <style lang="scss" scoped>
+$blue:#1890ff;
 
 .draggable-table{
   writing-mode: vertical-lr;
@@ -157,34 +160,75 @@ const deleteItem = () => {
   border: 1px solid #eee;
   padding:8px;
 }
-.left-index{
-  counter-reset:mandy 1;//计数器名字为mandy 默认值为1
-  counter-increment: mandy;// 递增的值
-  content:counter(mandy);
-}
+
 .circle-index{
   display: inline-block;
-  border: 1px solid blue;
-  border-radius: 50%;
   width:30px;
   height:30px;
-  text-align: center;
-  line-height:30px;
-  background-color: white;
+  position: relative;
  
+ 
+}
+.counter{
+  
+}
+.slot-box{
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  border-radius: 50%;
+  border: 1px solid $blue;
+  background-color: white;
+  line-height:30px;
+  text-align: center;
 }
 .index-wrapper{
  position: relative;
 }
-.left-index  :not(:last-child).index-wrapper::before{
+.left-index{
+   counter-reset:mandy 0;//计数器名字为mandy 默认值为1
+}
+.counter{
+  counter-increment: mandy;// 递增的值
+  content:counter(mandy);
+}
+.left-index .index-wrapper::before{
   position: absolute;
   left:50%;
   right:0;
-  height:calc(100% - 32px);
-  margin-top:31px;
-  margin-bottom: 1px;
+  top:0;
+  bottom:0;
   width:1px;
-  background-color:red;
+  background-color:$blue;
+  opacity: .4;
   content:'';
+
+}
+.left-index .index-wrapper:first-child::before{
+  position: absolute;
+  left:50%;
+  right:0;
+  top:calc(50% + 15px);
+  bottom:0;
+  width:1px;
+  background-color:$blue;
+  opacity: .4;
+  content:'';
+}
+.left-index .index-wrapper:last-child::before{
+  position: absolute;
+  left:50%;
+  right:0;
+  top:0;
+  bottom:calc(50% + 15px);;
+  width:1px;
+  background-color:$blue;
+  opacity: .4;
+  content:'';
+}
+.hidden-line ::before{
+display: none !important;
 }
 </style>
