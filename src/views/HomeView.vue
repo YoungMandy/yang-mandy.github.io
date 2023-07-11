@@ -1,9 +1,23 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+import Sidebar from '@/framework/Sidebar.vue'
+import Content from '@/framework/Content.vue'
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
+  <main class="page__home">
+    <sidebar class="sidebar"/>
+    <content class="content"/>
   </main>
 </template>
+
+<style lang="scss" scoped>
+.page__home{
+  display:flex;
+  height:100%;
+}
+.content{
+  flex-grow:1;
+  padding:24px;
+}
+
+</style>

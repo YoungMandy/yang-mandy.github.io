@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import Header from '@/framework/Header.vue';
+// import Header from './src/framework/Header.vue';
 import { ref } from 'vue'
 const technologyStack = ref('vue');
 function onTechnologyStackChange (name: string) {
@@ -11,7 +11,7 @@ function onTechnologyStackChange (name: string) {
 
 <template>
   <header>
-   <Header @changeTech="onTechnologyStackChange"></Header>
+   <!-- <Header @changeTech="onTechnologyStackChange"></Header>   s -->
   </header>
   <RouterView v-if="technologyStack ==='vue'"/>
   <iframe class="react-container" width="100%" v-if="technologyStack ==='react'" 

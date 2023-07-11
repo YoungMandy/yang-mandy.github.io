@@ -6,11 +6,9 @@ function changeTechnologyStack (name: string) {
 }
 </script>
 
-<template>
-  <div class="component_header">
+<template class="component_header">
     <a-button type="primary" @click="changeTechnologyStack('vue')">Vue项目</a-button>
     <a-button style="margin-left:16px" @click="changeTechnologyStack('react')">React项目</a-button>
-  </div>
 </template>
 
 <style>

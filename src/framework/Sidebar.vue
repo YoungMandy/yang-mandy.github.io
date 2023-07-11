@@ -1,6 +1,35 @@
-<!--
- * @desc: 
- * @param: 
- * @return: 
- * @Author: huili.lan
--->
+<script setup lang="ts">
+import { ref } from 'vue'
+
+import { menus } from '@/types/index';
+import router from '@/router';
+const openKeys = ref<string[]>(['css-basic']);
+const selectedKeys = ref<string[]>(['box-sizing']);
+function handleClick (name: string) {
+  console.log(name);
+  router.push({ name: name });
+  
+}
+</script>
+<template class="component_sidebar">
+  <a-menu
+    v-for="{id,title,name,children},index in menus"
+    :id="id"
+    :key="name"
+    style="width: 256px"
+    v-model:openKeys="openKeys"
+    v-model:selectedKeys="selectedKeys"
+    mode="inline"
+    @click="handleClick(name)"
+  >
+    <a-sub-menu :key="index" :title="title">
+      <a-menu-item v-for="item in children" :key="item.name" @click="handleClick(name)">{{ item.title }}</a-menu-item>
+    </a-sub-menu>
+  </a-menu>
+</template>
+<style lang="scss" scoped>
+$red: red;
+.component_sidebar {
+  color: $red;
+}
+</style>
