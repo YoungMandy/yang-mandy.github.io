@@ -8,7 +8,7 @@
 code {
   padding:4px;
   border-radius: 4px;
-  background-color: #eee;
+  background-color: #e6f7ff;
 }
 caption{
   display: block;
@@ -16,7 +16,12 @@ caption{
 .control-form{
   margin: 16px !important;;
   padding:16px !important;
-  background: #eee;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  .ant-form-item + .ant-form-item{
+    margin-top: 8px;
+  }
 }
 
 a,
