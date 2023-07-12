@@ -4,6 +4,7 @@ import draggable from 'vuedraggable';
 import { Form } from 'ant-design-vue';
 import { DeleteOutlined, DragOutlined } from '@ant-design/icons-vue';
 const useForm = Form.useForm;
+const MAX_LENGTH = 8;
 let activeKey = ref('table');
 let tableFormList = reactive([
   {
@@ -41,7 +42,11 @@ const onSubmit = () => {
   validate().then(()=> console.log(toRaw(tableFormList))).catch(err=>{console.log('error',err)})
 }
 const addItem = () => {
+  
   let index = tableFormList.length;
+  if (index >= MAX_LENGTH) {
+    return;
+  }
   const defaultItem =  {
   name: '',
   type: [],
@@ -94,19 +99,19 @@ const checkMove = function (e: any) {
               </td>
             </tr>
                <draggable  
-               v-model="tableFormList" 
+               :list="tableFormList" 
                item-key="id" 
                tag="tr" 
                handle=".handle">
-                <template #item="{element,index}">
-                  <td>
-                    <a-form class="content-form">
-                    <a-form-item  v-bind="validateInfos.name">
-                      <div>
-                        <span class="form-label">Activity name:</span><a-input v-model:value="element.name" style="width:300px"/>
-                      </div>
-                     <div style="margin-top:16px">
-                      <span class="form-label">Activity type:</span><a-select
+                <template #item="{element}">
+                  <td >
+                    <div class="form-wrapper"> 
+                    <a-form class="content-form" :model="tableFormList" >
+                    <a-form-item label="Activity name:" v-bind="validateInfos.name" >
+                        <a-input v-model:value="element.name" style="width:300px"/>
+                    </a-form-item>
+                    <a-form-item label="Activity type:" v-bind="validateInfos.type" >
+                      <a-select
                         v-model:value="element.type"
                         :options="options"
                         mode="tags"
@@ -114,16 +119,16 @@ const checkMove = function (e: any) {
                         style="width:300px"
                       >
                       </a-select>
-                     </div>
-                      
                     </a-form-item>
-                    <span class="handle"><DragOutlined /></span>
                   </a-form> 
+                  <span class="handle"><DragOutlined /></span>
+                  </div>
+                  
                 </td>
            
           </template>
           <template #footer>
-              <a-button type="primary" @click.prevent="addItem" class="add-button" ghost> add ({{ tableFormList.length }} / 8)</a-button>
+              <a-button type="primary" @click.prevent="addItem" :disabled="tableFormList.length == MAX_LENGTH" class="add-button" ghost> add ({{ tableFormList.length }} / {{ MAX_LENGTH }})</a-button>
           </template>
         </draggable>
             <tr class="right-action">
@@ -171,13 +176,19 @@ $blue:#1890ff;
   flex-direction: column;
 }
 .content-form{
+ 
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.form-wrapper{
   margin-left:16px;
   display: flex;
   align-items: center;
   border: 1px solid #eee;
   padding:8px;
-
 }
+
 
 .circle-index{
   display: inline-block;
