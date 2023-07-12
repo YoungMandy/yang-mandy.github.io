@@ -574,11 +574,11 @@ $blue:#1890ff;
 
 // float布局
 .layout__float{
-  height:100px;
+  min-height:180px;
   padding:10px;
   background-color: blanchedalmond;
   &-content{
-    height: 100%;
+    height: 60px;
     background:gainsboro;
     display: inline-block;
     border:1px solid greenyellow;
