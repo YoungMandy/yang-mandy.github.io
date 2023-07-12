@@ -5,7 +5,7 @@ import { DeleteOutlined, DragOutlined } from '@ant-design/icons-vue';
 import { ChildProcess } from 'child_process';
 
 // ==== table 布局====
-const MAX_LENGTH = 8;
+const MAX_LENGTH = 4;
 let activeKey = ref('table');
 let tableFormList = reactive([
   {
