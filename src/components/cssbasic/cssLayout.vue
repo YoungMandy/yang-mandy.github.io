@@ -144,7 +144,20 @@ const float = reactive({
         </a-collapse-panel>
 
         <a-collapse-panel key="flex" header="flex布局">
-          flex是目前最常用的布局
+          flex是目前最常用的布局(最初是在2009年由W3C提出)
+          flex布局通过对父盒子设置
+          <code>display:flex</code>或者
+          <code>display:inline-flex</code>
+          开启,
+          <ol class="counter-ul">
+            可以在父盒子上设置的css样式有
+            <li>flex-direction: row (默认值) | row-reverse | column | column</li>
+            <li>flex-warp: nowrap(默认值,不换行) | wrap | warp-reverse </li>
+            <li>flex-flow: flex-direction和flex-wrap的缩写,默认值是row nowrap </li>
+            <li>justify-content: flex-start(默认值) | flex-end | center | space-between | space-around </li>
+            <li>align-items: stretch(默认值,如果项目未设置高度或者高度为auto,将占满整个容器) | flex-start | flex-end | center | baseline </li>
+            <li>align-content: stretch(默认值) | flex-start | flex-end | center | space-between | space-around</li>
+          </ol>
         </a-collapse-panel>
 
         <a-collapse-panel key="grid" header="grid布局">
@@ -214,13 +227,6 @@ $blue:#1890ff;
 .index-wrapper{
  position: relative;
 }
-.left-index{
-   counter-reset:mandy 0;//计数器名字为mandy 默认值为1
-}
-.counter{
-  counter-increment: mandy;// 递增的值
-  content:counter(mandy);
-}
 .left-index .index-wrapper::before{
   position: absolute;
   left:50%;
@@ -288,5 +294,10 @@ $blue:#1890ff;
   &-button{
     float:right;
   }
+}
+
+// flex布局
+.layout__flex{
+  
 }
 </style>
