@@ -1,9 +1,9 @@
 <script setup lang="ts" >
 import { ref, reactive, toRaw } from 'vue';
 import draggable from 'vuedraggable';
-import { Form } from 'ant-design-vue';
 import { DeleteOutlined, DragOutlined } from '@ant-design/icons-vue';
-const useForm = Form.useForm;
+
+// ==== table 布局====
 const MAX_LENGTH = 8;
 let activeKey = ref('table');
 let tableFormList = reactive([
@@ -14,34 +14,26 @@ let tableFormList = reactive([
   }
 ]);
 
-const modelRef = reactive({
-  name: '',
-  region: undefined,
-  type:[]
-})
 const rulesRef = reactive({
   name: [
     {
       required: true,
-      message:'Please input name',
+      message: 'Please input name',
+      trigger: 'blur',
     }
   ],
   type: [
     {
       required: true,
       message: 'Please select type',
-      type:'array'
+      type: 'array',
+      trigger: 'blur',
     }
   ]
 })
-const options = [...Array(25)].map((_, i) => ({ value: (i + 10000).toString(36) + (i + 1) })) ;
+const options = [...Array(25)].map((_, i) => ({ value: (i + 10000).toString(10) + (i + 10000000) })) ;
 
-const { resetFields, validate, validateInfos } = useForm(tableFormList, rulesRef);
-const onSubmit = () => {
-  validate().then(()=> console.log(toRaw(tableFormList))).catch(err=>{console.log('error',err)})
-}
 const addItem = () => {
-  
   let index = tableFormList.length;
   if (index >= MAX_LENGTH) {
     return;
@@ -57,19 +49,6 @@ const addItem = () => {
 const deleteItem = (index:number) => {
   tableFormList.splice(index, 1);
 }
-const checkMove = function (e: any) {
-  console.log(e)
-  const curIndex = e.draggedContext.index;
-  const futureIndex = e.draggedContext.futureIndex;
-  if (curIndex == futureIndex) {
-    return;
-  }
- 
-  const curItem = tableFormList.splice(curIndex,1)[0];// 删除当前元素
-  const fIndex = futureIndex - 1 >= 0 ? futureIndex - 1: futureIndex;
-  tableFormList.splice(fIndex, 1, curItem);
-}
-
 </script>
 <template>
   <section class="component__css-layout">
@@ -102,27 +81,27 @@ const checkMove = function (e: any) {
                item-key="id" 
                tag="tr" 
                handle=".handle">
-                <template #item="{element}">
+                <template #item="{element,index}">
                   <td >
                     <div class="form-wrapper"> 
-                    <a-form class="content-form" :model="tableFormList" >
-                    <a-form-item label="Activity name:" v-bind="validateInfos.name" >
-                        <a-input v-model:value="element.name" style="width:300px"/>
-                    </a-form-item>
-                    <a-form-item label="Activity type:" v-bind="validateInfos.type" >
-                      <a-select
-                        v-model:value="element.type"
-                        :options="options"
-                        mode="tags"
-                        placeholder="Please select"
-                        style="width:300px"
-                      >
-                      </a-select>
-                    </a-form-item>
-                  </a-form> 
-                  <span class="handle"><DragOutlined /></span>
-                  </div>
-                  
+                      <a-form class="content-form" :model="tableFormList[index]" :rules="rulesRef" >
+                        <a-form-item label="Activity name:" name="name" >
+                          <a-input v-model:value="tableFormList[index].name"
+                            style="width:300px"/>
+                        </a-form-item>
+                        <a-form-item label="Activity type:" name="type" >
+                          <a-select
+                            v-model:value="tableFormList[index].type"
+                            :options="options"
+                            mode="tags"
+                            placeholder="Please select"
+                            style="width:300px"
+                          >
+                          </a-select>
+                        </a-form-item>
+                      </a-form> 
+                      <span class="handle"><DragOutlined /></span>
+                    </div>
                 </td>
            
           </template>
@@ -135,17 +114,20 @@ const checkMove = function (e: any) {
                 <DeleteOutlined /></td>
             </tr>
           </table>
-          
         </a-collapse-panel>
+
         <a-collapse-panel key="float" header="div + float布局" :forceRender="true">
           div+ float布局
         </a-collapse-panel>
+
         <a-collapse-panel key="flex" header="flex布局">
           flex是目前最常用的布局
         </a-collapse-panel>
+
         <a-collapse-panel key="grid" header="grid布局">
           grid布局是三维布局
         </a-collapse-panel>
+
       </a-collapse>
   </section>
 
@@ -164,10 +146,7 @@ $blue:#1890ff;
   .handle{
     margin-left:4px;
   }
-  .ant-form-item{
-    margin-top:16px ;
-    margin-bottom: 16px;
-  }
+
 }
 
 .flex-box{
@@ -175,7 +154,7 @@ $blue:#1890ff;
   flex-direction: column;
 }
 .content-form{
- 
+  padding-top:16px;
   display: flex;
   align-items: center;
   flex-direction: column;
