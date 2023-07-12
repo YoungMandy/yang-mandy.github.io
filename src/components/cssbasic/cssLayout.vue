@@ -591,6 +591,9 @@ $blue:#1890ff;
 
 // flex布局
 .code-ol{
+  display: flex;
+  flex-direction: column;;
+  width:900px;
   li{
     background-color: #eee;
     margin-top:4px;
@@ -601,7 +604,7 @@ $blue:#1890ff;
   display: flex;
   flex-wrap: wrap;
   min-height:300px;
-  background-color: palegoldenrod;
+  background-color: #d8e1ed;
   .flex-item{
     background-color: antiquewhite;
     border:1px solid white;
