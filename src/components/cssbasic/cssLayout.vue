@@ -7,11 +7,12 @@ const useForm = Form.useForm;
 let activeKey = ref('table');
 let tableFormList = reactive([
   {
-  name: '',
-  region: undefined,
-  type:[]
+    id:0,
+    name: '',
+    type:[]
   }
 ]);
+let dragging = ref(false);
 
 const modelRef = reactive({
   name: '',
@@ -35,22 +36,36 @@ const rulesRef = reactive({
 })
 const options = [...Array(25)].map((_, i) => ({ value: (i + 10000).toString(36) + (i + 1) })) ;
 
-const { resetFields, validate, validateInfos } = useForm(modelRef, rulesRef);
+const { resetFields, validate, validateInfos } = useForm(tableFormList, rulesRef);
 const onSubmit = () => {
-  validate().then(()=> console.log(toRaw(modelRef))).catch(err=>{console.log('error',err)})
+  validate().then(()=> console.log(toRaw(tableFormList))).catch(err=>{console.log('error',err)})
 }
 const addItem = () => {
+  let index = tableFormList.length;
   const defaultItem =  {
   name: '',
-  region: undefined,
-  type:[]
+  type: [],
+  id: index++
   }
   tableFormList.push(defaultItem)
 
 }
-const deleteItem = () => {
-  
+const deleteItem = (index:number) => {
+  tableFormList.splice(index, 1);
 }
+const checkMove = function (e: any) {
+  console.log(e)
+  const curIndex = e.draggedContext.index;
+  const futureIndex = e.draggedContext.futureIndex;
+  if (curIndex == futureIndex) {
+    return;
+  }
+ 
+  const curItem = tableFormList.splice(curIndex,1)[0];// 删除当前元素
+  const fIndex = futureIndex - 1 >= 0 ? futureIndex - 1: futureIndex;
+  tableFormList.splice(fIndex, 1, curItem);
+}
+
 </script>
 <template>
   <section class="component__css-layout">
@@ -71,23 +86,27 @@ const deleteItem = () => {
           link="https://github.com/SortableJS/vue.draggable.next"
           >vuedraggable</a>
           <table class="draggable-table">
-            <thead class="left-index">
+            <tr class="left-index">
               <td v-for="{},index in tableFormList"  :class="{'index-wrapper':tableFormList.length > 1}" >
                 <div class="circle-index">
                   <div class="slot-box">{{ index+ 1 }}</div>
                 </div>
               </td>
-            </thead>
-               <draggable  v-model="tableFormList" item-key="id" tag="tr" handle=".handle">
-                <template #item="{element}">
+            </tr>
+               <draggable  
+               v-model="tableFormList" 
+               item-key="id" 
+               tag="tr" 
+               handle=".handle">
+                <template #item="{element,index}">
                   <td>
                     <a-form class="content-form">
-                    <a-form-item label="Activity name" v-bind="validateInfos.name">
+                    <a-form-item  v-bind="validateInfos.name">
                       <div>
-                         <a-input v-model:value="element.name" style="width:300px"/>
+                        <span class="form-label">Activity name:</span><a-input v-model:value="element.name" style="width:300px"/>
                       </div>
                      <div style="margin-top:16px">
-                      <a-select
+                      <span class="form-label">Activity type:</span><a-select
                         v-model:value="element.type"
                         :options="options"
                         mode="tags"
@@ -103,19 +122,16 @@ const deleteItem = () => {
                 </td>
            
           </template>
+          <template #footer>
+              <a-button type="primary" @click.prevent="addItem" class="add-button" ghost> add ({{ tableFormList.length }} / 8)</a-button>
+          </template>
         </draggable>
-            <tfoot class="right-action">
-              <td v-for="index in tableFormList"><DeleteOutlined /></td>
-            </tfoot>
+            <tr class="right-action">
+              <td v-for="{},index in tableFormList" @click.native="deleteItem(index)" :class="{'disabled':tableFormList.length < 2}">
+                <DeleteOutlined /></td>
+            </tr>
           </table>
           
-         
-
-         <a-button type="primary" @click.prevent="addItem">add</a-button>
-              <a-button style="margin-left: 10px" @click="deleteItem">delete</a-button>
-        
-          插件
-            
         </a-collapse-panel>
         <a-collapse-panel key="float" header="div + float布局" :forceRender="true">
           div+ float布局
@@ -137,6 +153,7 @@ $blue:#1890ff;
   writing-mode: vertical-lr;
 }
 .draggable-table td{
+  padding-top:8px;
   writing-mode: horizontal-tb;
 }
 .draggable-table {
@@ -159,6 +176,7 @@ $blue:#1890ff;
   align-items: center;
   border: 1px solid #eee;
   padding:8px;
+
 }
 
 .circle-index{
@@ -168,9 +186,6 @@ $blue:#1890ff;
   position: relative;
  
  
-}
-.counter{
-  
 }
 .slot-box{
   position: absolute;
@@ -228,7 +243,21 @@ $blue:#1890ff;
   opacity: .4;
   content:'';
 }
-.hidden-line ::before{
-display: none !important;
+
+.add-button{
+  display: block;
+  width:450px;
+  margin-top:24px;
+  margin-left:16px;
+  writing-mode: horizontal-tb;
+}
+.form-label{
+  width:100px;
+  display: inline-block;
+}
+.disabled{
+  cursor:not-allowed;
+  opacity: .5;
+  pointer-events: none;
 }
 </style>
