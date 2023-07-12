@@ -112,7 +112,7 @@ onMounted(() => {
 
         <a-collapse-panel key="2" header="IE盒模型" :forceRender="true">
           IE盒模型,通过设置<code>box-sizing:border-box</code>实现
-          width的作用范围是border-box,所以整个盒子的宽度 = width值;
+          width的作用范围是border-box,所以整个盒子的宽度一般等于width值(当content-box的宽度值大于等于0时);
 
           <a-form class="control-form" layout="inline" :model="ieBox">
             <a-form-item label="border值:">

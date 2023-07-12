@@ -13,7 +13,6 @@ let tableFormList = reactive([
     type:[]
   }
 ]);
-let dragging = ref(false);
 
 const modelRef = reactive({
   name: '',
