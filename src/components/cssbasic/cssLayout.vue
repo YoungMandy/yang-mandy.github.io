@@ -1,8 +1,7 @@
 <script setup lang="ts" >
-import { ref, reactive, toRaw } from 'vue';
+import { ref, reactive,computed } from 'vue';
 import draggable from 'vuedraggable';
 import { DeleteOutlined, DragOutlined } from '@ant-design/icons-vue';
-import { ChildProcess } from 'child_process';
 
 // ==== table 布局====
 const MAX_LENGTH = 4;
@@ -90,12 +89,13 @@ const flex = reactive({
     }
   }
 })
-const flexParentStyle:any = reactive({
+let flexParentStyle:any  = computed(() => ({
   'justify-content':flex.parent.justifyContent ,
   'align-items':flex.parent.alignItems,
   'flex-direction':flex.parent.flexDirection,
   'flex-wrap':flex.parent.flexWrap,
-})
+}))
+
 </script>
 <template>
   <section class="component__css-layout">
@@ -124,7 +124,7 @@ const flexParentStyle:any = reactive({
                 </div>
               </td>
             </tr>
-               <draggable  
+            <draggable  
                :list="tableFormList" 
                item-key="id" 
                tag="tr" 
@@ -156,7 +156,7 @@ const flexParentStyle:any = reactive({
           <template #footer>
               <a-button type="primary" @click.prevent="addItem" :disabled="tableFormList.length == MAX_LENGTH" class="add-button" ghost> add ({{ tableFormList.length }} / {{ MAX_LENGTH }})</a-button>
           </template>
-        </draggable>
+            </draggable>
             <tr class="right-action">
               <td v-for="{},index in tableFormList" @click.native="deleteItem(index)" :class="{'disabled':tableFormList.length < 2}">
                 <DeleteOutlined /></td>
@@ -455,6 +455,17 @@ const flexParentStyle:any = reactive({
 
         <a-collapse-panel key="grid" header="grid布局">
           grid布局是三维布局
+          <ul>
+            <li> grid布局通过<code>grid-template-columns</code>和<code>grid-template-rows</code> 划分行列</li>
+            <li> 可以通过<code>grid-template-areas</code>把连续矩形的盒子进行命名划分,再通过名字设置具体样式</li>
+          </ul>
+  
+          <div class="layout__grid">
+           <div class="header"></div>
+           <div class="funny"></div>
+           <div class="inclined"></div>
+           <div class="interesting"></div>
+          </div>
         </a-collapse-panel>
 
       </a-collapse>
@@ -602,7 +613,6 @@ $blue:#1890ff;
 }
 .layout__flex{
   display: flex;
-  flex-wrap: wrap;
   min-height:300px;
   background-color: #d8e1ed;
   .flex-item{
@@ -615,11 +625,38 @@ $blue:#1890ff;
     display: flex;
     flex-wrap: wrap;
   }
-  .left-item {
-  
+}
+
+.layout__grid{
+  background-color: rgb(88, 94, 151);
+  display: grid;
+  grid-template-columns: 200px 1fr 300px;
+  grid-template-rows:repeat(3,100px);
+  grid-template-areas: 
+  "header funny funny"
+  "header  inclined interesting"
+  "header inclined interesting";
+  gap: 10px;
+
+  .header{
+    background:red;
+    grid-area: header;
   }
-  .right-item {
-  
+
+  .funny{
+    background:blue;
+    grid-area: funny;
   }
+
+  .inclined{
+    background:yellow;
+    grid-area: inclined;
+  }
+
+  .interesting{
+    background:yellowgreen;
+    grid-area: interesting;
+  }
+
 }
 </style>
