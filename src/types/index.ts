@@ -20,7 +20,8 @@ export const menus = [
         title: '布局',
       },
     ],
-  }, {
+  },
+  {
     id: '2',
     name: 'browser',
     title: '浏览器原理',
@@ -29,7 +30,12 @@ export const menus = [
         id: '21',
         name: 'event-loop',
         title: '事件循环',
-      }
+      },
+      {
+        id: '22',
+        name: 'install-listen',
+        title: '简单版发布订阅',
+      },
     ],
   },
 ];

@@ -28,7 +28,12 @@ const router = createRouter({
           path: '/event-loop',
           name: 'event-loop',
           component: () => import('@/components/browser/EventLoop.vue'),
-        }
+        },
+        {
+          path: '/install-listen',
+          name: 'install-listen',
+          component: () => import('@/components/browser/InstallListen.vue'),
+        },
       ],
     },
   ],
