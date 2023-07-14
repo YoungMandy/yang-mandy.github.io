@@ -553,7 +553,7 @@ const gridCssCodeLine = `
            <div class="interesting"></div>
           </div>
 
-          <p style="margin-top:16px">也可以不用设置<code>grid-template-areas</code>,而是对每个类选择器设置<code>grid-area:grid-row-start / grid-column-start / grid-row-end /grid-column-end</code>
+          <p style="margin-top:16px">可以不用设置<code>grid-template-areas</code>,而是对每个类选择器设置<code>grid-area:grid-row-start / grid-column-start / grid-row-end /grid-column-end</code>
           效果等同
           </p>
 
