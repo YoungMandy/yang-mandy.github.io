@@ -108,7 +108,7 @@ const gridCssCodeLine = `
 
   <img
     src="@/assets/layout_grid.png"
-    style="width: 600px; object-fit: contain"
+    style="width: 600px; object-fit: contain;margin-bottom:16px"
   />
 
   <pre>

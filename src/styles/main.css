@@ -6,12 +6,16 @@
   height: 100%;
 }
 code {
-  padding:4px;
+  display: inline-block;
+  padding:2px 4px;
   border-radius: 4px;
   background-color: #e6f7ff;
+  margin:1px;
 }
 pre{
-  background-color: #fafafa;
+  background-color: #f5f2f0;
+  border:2px solid #eee;
+  border-radius: 4px;
 }
 caption{
   display: block;

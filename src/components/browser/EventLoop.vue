@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { eventLoopTest }  from '@/components/browser/js/evetLoop.js'
 </script>
 <template>
   <section>
@@ -19,6 +20,11 @@
       <li><code>ReportingObderver</code></li>
     </ol>
     Observer属于微任务,且优先级小于Promise,参考来源<a link="https://zhuanlan.zhihu.com/p/482144072">浏览器的五种观察者模式</a>
+
+    <p>研究事件循环和闭包的参考代码,可以用开发者工具调试,注意查看调用栈</p>
+    <pre>
+      {{ eventLoopTest }}
+    </pre>
   </section>
 </template>
 <style>

@@ -43,7 +43,7 @@
         a:hover{color:red}
       </pre>
     <h3>伪元素</h3>
-      <p>伪元素的特征是前面有两个冒号:: 会出现在DOM树上,常见的伪元素有<code>::before</code>、<code>::after</code>、<code>::first-letter</code>、<code>first-line</code>等</p>
+      <p>伪元素的特征是前面有两个冒号:: 会出现在DOM树上,常见的伪元素有<code>::before</code>、<code>::after</code>、<code>::first-letter</code>、<code>::first-line</code>等</p>
   </section>
 
 </template>
