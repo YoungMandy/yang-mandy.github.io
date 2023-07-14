@@ -11,24 +11,22 @@ function handleClick (name: string) {
   
 }
 </script>
-<template class="component_sidebar">
+<template class="component__sidebar">
   <a-menu
-    v-for="{id,title,name,children},index in menus"
-    :id="id"
-    :key="name"
-    style="width: 256px"
+    
+
     v-model:openKeys="openKeys"
     v-model:selectedKeys="selectedKeys"
     mode="inline"
   >
-    <a-sub-menu :key="index" :title="title">
+    <a-sub-menu :key="index" :title="title" v-for="{id,title,name,children},index in menus">
       <a-menu-item v-for="item in children" :key="item.name" @click="handleClick(item.name)">{{ item.title }}</a-menu-item>
     </a-sub-menu>
   </a-menu>
 </template>
 <style lang="scss" scoped>
-$red: red;
-.component_sidebar {
-  color: $red;
+
+.component__sidebar {
+  
 }
 </style>

@@ -20,5 +20,16 @@ export const menus = [
         title: '布局',
       },
     ],
+  }, {
+    id: '2',
+    name: 'browser',
+    title: '浏览器原理',
+    children: [
+      {
+        id: '21',
+        name: 'event-loop',
+        title: '事件循环',
+      }
+    ],
   },
 ];

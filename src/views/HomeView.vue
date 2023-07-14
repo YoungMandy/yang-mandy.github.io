@@ -19,5 +19,8 @@ import Content from '@/framework/Content.vue'
   flex-grow:1;
   padding:24px;
 }
+.sidebar{
+  width: 240px;
+}
 
 </style>
