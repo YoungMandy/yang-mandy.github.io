@@ -9,6 +9,16 @@
     <h2>消息队列</h2>
     <p>一个个任务放到消息队列里面依次执行,在<strong>消息队列</strong>里面的任务称为<strong>宏任务</strong>,为了让优先级更高的新任务更快的执行,浏览器又为每个宏任务建立了一个<strong>微任务队列</strong>,当前宏任务执行完毕后,先看当前宏任务的微任务队列里面是否有微任务要执行,有的话先把微任务执行完毕,再执行下一个宏任务</p>
     <img src="@/assets/eventLoop.png" width="800" style="object-fit: contain;">
+
+    <h2>微任务</h2>
+    <ol>浏览器提供了五种Observer来监听页面变化
+      <li><code>MutationObserver</code></li>
+      <li><code>IntersectionObserver</code></li>
+      <li><code>PerformanceObserver</code></li>
+      <li><code>ResizeObserver</code></li>
+      <li><code>ReportingObderver</code></li>
+    </ol>
+    Observer属于微任务,且优先级小于Promise,参考来源<a link="https://zhuanlan.zhihu.com/p/482144072">浏览器的五种观察者模式</a>
   </section>
 </template>
 <style>
