@@ -71,15 +71,15 @@ const gridCssCodeLine = `
 </script>
 <template>
   grid布局是三维布局
+  <p>本文参考了微信文章
+    <a link="https://mp.weixin.qq.com/s/vR7Zraa7ui8G90sRNhR8hA">简明gird教程</a></p>
   <ul>
     <li>
-      grid布局通过<code>grid-template-columns</code>和<code
-        >grid-template-rows</code
-      >
-      划分行列
+      grid布局通过<code>grid-template-columns</code>和<code>grid-template-rows</code>
+      划分行列(格子)
     </li>
     <li>
-      可以通过<code>grid-template-areas</code>把连续矩形的盒子进行命名划分,再通过名字设置具体样式
+      可以通过<code>grid-template-areas</code>把<Strong>连续的矩形</Strong>的盒子进行划分,再通过名字设置具体样式
     </li>
   </ul>
 
