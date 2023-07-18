@@ -1,11 +1,13 @@
 <script setup lang="ts">
+import PageHeader from '@/framework/PageHeader.vue';
 </script>
 <template>
   <section class="component__css-selector">
-    <h1 class="page-title">css的选择器</h1>
-    <p class="page-description">
-      css选择器的作用, 让我们通过一些规则匹配到特定的DOM,对其设置样式或者修改
-    </p>
+    <page-header 
+    title="css的选择器" 
+    description="css选择器的作用, 让我们通过一些规则匹配到特定的DOM,对其设置样式或者修改">
+    </page-header>
+
     <h2>css选择器的分类</h2>
     <p>css选择器可以分为4类,选择器、选择符、伪类和伪元素</p>
 

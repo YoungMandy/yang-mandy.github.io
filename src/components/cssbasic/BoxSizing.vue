@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ref, reactive,onMounted } from 'vue';
+import { ref, reactive, onMounted } from 'vue';
+import PageHeader from '@/framework/PageHeader.vue'
 interface FormState {
   margin: number;
   border: number;
@@ -47,10 +48,11 @@ onMounted(() => {
 
 <template>
   <section class="component__box-sizing">
-    <h1 class="page-title">css的盒模型</h1>
-    <p class="page-description">
-      css的盒模型主要分为两种,通常称为IE盒模型和标准盒模型。他们的区别在于width设置的宽度的作用范围不同,通过css样式<code>box-sizing</code>控制
-    </p>
+    <page-header title="css的盒模型">
+      <template v-slot:description>
+        css的盒模型主要分为两种,通常称为IE盒模型和标准盒模型。他们的区别在于width设置的宽度的作用范围不同,通过css样式<code>box-sizing</code>控制
+      </template>
+    </page-header>
 
     <div class="page-content">
       <a-collapse v-model:activeKey="activeKey">

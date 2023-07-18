@@ -1,4 +1,4 @@
-import{d as o,c as a,e as t,h as n,f as e,t as r,u as i,k as l}from"./index-35420fa0.js";const s="/assets/eventLoop-03959c1b.png",c=`
+import{_ as o}from"./PageHeader.vue_vue_type_script_setup_true_lang-7a6702c9.js";import{d as t,c as a,e as n,h as r,f as e,t as i,u as l,k as s,g as c}from"./index-3518f921.js";const d="/assets/eventLoop-03959c1b.png",p=`
   // 研究事件循环的代码
   // 竞态问题，又叫竞态条件(race condition),它出现的原因是无法保证异步操作不一定会按他们开始的顺序执行,下面是可以用闭包做上一次异步请求的过期标识
 
@@ -57,5 +57,5 @@ import{d as o,c as a,e as t,h as n,f as e,t as r,u as i,k as l}from"./index-3542
   // await后面的语句恢复执行，Promise.then()创建微任务，SetTimeout创建宏任务
   // 所以最终两次输出的expired分别为true和false。
   
-`,d=l('<h1 class="page-title">事件循环</h1><p class="page-description"> 浏览器上会发生很多事件,如IO输入、按钮点击、屏幕缩放等等,浏览器需要有个调度机制让这些事件有条不紊地顺序执行,这个调度机制就是事件循环。 </p><h2>消息队列</h2><p>一个个任务放到消息队列里面依次执行,在<strong>消息队列</strong>里面的任务称为<strong>宏任务</strong>,为了让优先级更高的新任务更快的执行,浏览器又为每个宏任务建立了一个<strong>微任务队列</strong>,当前宏任务执行完毕后,先看当前宏任务的微任务队列里面是否有微任务要执行,有的话先把微任务执行完毕,再执行下一个宏任务</p><img src="'+s+'" width="800" style="object-fit:contain;"><h2>微任务</h2><ol>浏览器提供了五种Observer来监听页面变化 <li><code>MutationObserver</code></li><li><code>IntersectionObserver</code></li><li><code>PerformanceObserver</code></li><li><code>ResizeObserver</code></li><li><code>ReportingObderver</code></li></ol>',7),p=e("a",{link:"https://zhuanlan.zhihu.com/p/482144072"},"浏览器的五种观察者模式",-1),u=e("p",null,"研究事件循环和闭包的参考代码,可以用开发者工具调试,注意查看调用栈",-1),v=o({__name:"EventLoop",setup(g){return(b,x)=>(a(),t("section",null,[d,n(" Observer属于微任务,且优先级小于Promise,参考来源"),p,u,e("pre",null,"      "+r(i(c))+`
-    `,1)]))}});export{v as default};
+`,u=s('<h2>消息队列</h2><p>一个个任务放到消息队列里面依次执行,在<strong>消息队列</strong>里面的任务称为<strong>宏任务</strong>,为了让优先级更高的新任务更快的执行,浏览器又为每个宏任务建立了一个<strong>微任务队列</strong>,当前宏任务执行完毕后,先看当前宏任务的微任务队列里面是否有微任务要执行,有的话先把微任务执行完毕,再执行下一个宏任务</p><img src="'+d+'" width="800" style="object-fit:contain;"><h2>微任务</h2><ol>浏览器提供了五种Observer来监听页面变化 <li><code>MutationObserver</code></li><li><code>IntersectionObserver</code></li><li><code>PerformanceObserver</code></li><li><code>ResizeObserver</code></li><li><code>ReportingObderver</code></li></ol>',5),g=e("a",{link:"https://zhuanlan.zhihu.com/p/482144072"},"浏览器的五种观察者模式",-1),b=e("p",null,"研究事件循环和闭包的参考代码,可以用开发者工具调试,注意查看调用栈",-1),h=t({__name:"EventLoop",setup(x){return(f,m)=>(c(),a("section",null,[n(o,{title:"事件循环",description:"浏览器上会发生很多事件,如IO输入、按钮点击、屏幕缩放等等,浏览器需要有个调度机制让这些事件有条不紊地顺序执行,这个调度机制就是事件循环。"}),u,r(" Observer属于微任务,且优先级小于Promise,参考来源"),g,b,e("pre",null,"      "+i(l(p))+`
+    `,1)]))}});export{h as default};
