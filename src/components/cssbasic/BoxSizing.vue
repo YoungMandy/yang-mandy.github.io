@@ -57,7 +57,7 @@ onMounted(() => {
     <div class="page-content">
       <a-collapse v-model:activeKey="activeKey">
         <a-collapse-panel key="standard" header="标准盒模型" :forceRender="true">
-          标准盒模型,通过设置<code>box-sizing:content-box</code>实现,
+          标准盒模型,通过设置<code>box-sizing:content-box</code>(默认值)实现,
           width的作用范围是content-box,所以整个盒子的宽度 = width + padding * 2
           + border * 2
           <a-form class="control-form" layout="inline" :model="standardBox">

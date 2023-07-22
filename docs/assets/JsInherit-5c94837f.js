@@ -1,4 +1,4 @@
-import{_ as c}from"./PageHeader.vue_vue_type_script_setup_true_lang-7f986194.js";import{d as i,b as a,c as l,e as t,u as o,f as e,g as h}from"./index-3c958c66.js";const r=`// 1.原型链继承
+import{_ as c}from"./PageHeader.vue_vue_type_script_setup_true_lang-6a102bba.js";import{d as i,b as a,c as l,e as t,u as o,f as e,g as h}from"./index-b7e0e228.js";const r=`// 1.原型链继承
 function Parent () {
   this.name = 'parent'
 }
