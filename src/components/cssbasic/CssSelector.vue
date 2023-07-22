@@ -1,5 +1,19 @@
 <script setup lang="ts">
 import PageHeader from '@/framework/PageHeader.vue';
+const code =`/* 后代关系 */
+        .parent img { object-fit: cover }
+
+        /* 父子关系 */
+        .parent > img { object-fit:contain }
+
+        /* 相邻兄弟关系 */
+        button + button { margin-left:16px }
+
+        /* 兄弟关系 */
+        button ~ button { margin-left: 16px }
+
+         /* 列关系 */
+        .col || td { color: red }`
 </script>
 <template>
   <section class="component__css-selector">
@@ -22,7 +36,10 @@ import PageHeader from '@/framework/PageHeader.vue';
         <li>表示列关系的双管道 ( || ) </li>
       </ol>
       这5种选择符分别示意如下:
-      <pre>
+       
+      <highlightjs
+        language="css"
+        code="
         /* 后代关系 */
         .parent img { object-fit: cover }
 
@@ -36,14 +53,17 @@ import PageHeader from '@/framework/PageHeader.vue';
         button ~ button { margin-left: 16px }
 
          /* 列关系 */
-        .col || td { color: red }
-      </pre>
+        .col || td { color: red }"
+        />
+        
 
     <h3>伪类</h3>
       <p>伪类的特征是前面会有一个冒号: ,通常与浏览器行为或者用户行为关联,如</p>
-      <pre>
-        a:hover{color:red}
-      </pre>
+      <highlightjs 
+      language="css"
+      code="a:hover{ color:red }"
+      />
+        
     <h3>伪元素</h3>
       <p>伪元素的特征是前面有两个冒号:: 会出现在DOM树上,常见的伪元素有<code>::before</code>、<code>::after</code>、<code>::first-letter</code>、<code>::first-line</code>等</p>
   </section>
