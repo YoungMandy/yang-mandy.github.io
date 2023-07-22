@@ -38,4 +38,16 @@ export const menus = [
       },
     ],
   },
+  {
+    id: '3',
+    name: 'js-basic',
+    title: 'JS底层设计',
+    children: [
+      {
+        id: '31',
+        name: 'js-inherit',
+        title: '继承',
+      },
+    ],
+  },
 ];
