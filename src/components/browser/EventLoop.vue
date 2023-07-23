@@ -11,7 +11,7 @@ import PageHeader from '@/framework/PageHeader.vue';
   
     <h2>消息队列</h2>
     <p>一个个任务放到消息队列里面依次执行,在<strong>消息队列</strong>里面的任务称为<strong>宏任务</strong>,为了让优先级更高的新任务更快的执行,浏览器又为每个宏任务建立了一个<strong>微任务队列</strong>,当前宏任务执行完毕后,先看当前宏任务的微任务队列里面是否有微任务要执行,有的话先把微任务执行完毕,再执行下一个宏任务</p>
-    <img src="@/assets/eventLoop.png" width="800" style="object-fit: contain;">
+    <img src="@/assets/eventLoop.png" width="600" style="object-fit: contain;padding:20px;border:1px solid #eee;margin-bottom: 16px;">
 
     <h2>微任务</h2>
     <ol>浏览器提供了五种Observer来监听页面变化
