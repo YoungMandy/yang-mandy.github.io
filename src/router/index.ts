@@ -39,6 +39,11 @@ const router = createRouter({
           name: 'js-inherit',
           component: () => import('@/components/jsbasic/JsInherit.vue'),
         },
+        {
+          path: '/http-history',
+          name: 'http-history',
+          component: () => import('@/components/network/HttpHistory.vue'),
+        },
       ],
     },
   ],
