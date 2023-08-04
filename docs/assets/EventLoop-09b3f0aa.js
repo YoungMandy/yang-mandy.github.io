@@ -1,4 +1,4 @@
-import{_ as a}from"./PageHeader.vue_vue_type_script_setup_true_lang-a9142d28.js";import{d as n,b as r,c as i,e,h as l,u as s,U as c,f as o,g as d}from"./index-3bba5efc.js";const p="/assets/event-loop-03959c1b.png",u=`
+import{_ as a}from"./PageHeader.vue_vue_type_script_setup_true_lang-40d5c32e.js";import{d as n,b as r,c as i,e,h as l,u as s,U as c,f as o,g as d}from"./index-2cad2cfc.js";const p="/assets/event-loop-03959c1b.png",u=`
   // 研究事件循环的代码
   // 竞态问题，又叫竞态条件(race condition),它出现的原因是无法保证异步操作不一定会按他们开始的顺序执行,下面是可以用闭包做上一次异步请求的过期标识
 

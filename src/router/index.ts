@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
+import NotFound from '@/framework/NotFound.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -45,6 +46,10 @@ const router = createRouter({
           component: () => import('@/components/network/HttpHistory.vue'),
         },
       ],
+    },
+    {
+      path: '/:pathMatch(.*)',
+      component: NotFound,
     },
   ],
 });
