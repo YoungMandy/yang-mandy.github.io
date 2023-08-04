@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref ,onMounted} from 'vue'
 
 import { menus } from '@/types/index';
 import router from '@/router';
@@ -10,11 +10,10 @@ function handleClick (name: string) {
   router.push({ name: name });
   
 }
+onMounted(() => handleClick('box-sizing'));
 </script>
 <template class="component__sidebar">
   <a-menu
-    
-
     v-model:openKeys="openKeys"
     v-model:selectedKeys="selectedKeys"
     mode="inline"
