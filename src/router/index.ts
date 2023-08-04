@@ -10,37 +10,37 @@ const router = createRouter({
       component: HomeView,
       children: [
         {
-          path: '/box-sizing',
+          path: 'box-sizing',
           name: 'box-sizing',
           component: () => import('@/components/cssbasic/BoxSizing.vue'),
         },
         {
-          path: '/css-selector',
+          path: 'css-selector',
           name: 'css-selector',
           component: () => import('@/components/cssbasic/CssSelector.vue'),
         },
         {
-          path: '/css-layout',
+          path: 'css-layout',
           name: 'css-layout',
           component: () => import('@/components/cssbasic/cssLayout.vue'),
         },
         {
-          path: '/event-loop',
+          path: 'event-loop',
           name: 'event-loop',
           component: () => import('@/components/browser/EventLoop.vue'),
         },
         {
-          path: '/install-listen',
+          path: 'install-listen',
           name: 'install-listen',
           component: () => import('@/components/browser/InstallListen.vue'),
         },
         {
-          path: '/js-inherit',
+          path: 'js-inherit',
           name: 'js-inherit',
           component: () => import('@/components/jsbasic/JsInherit.vue'),
         },
         {
-          path: '/http-history',
+          path: 'http-history',
           name: 'http-history',
           component: () => import('@/components/network/HttpHistory.vue'),
         },
