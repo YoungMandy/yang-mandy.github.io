@@ -36,6 +36,11 @@ export const menus = [
         name: 'install-listen',
         title: '简单版发布订阅',
       },
+      {
+        id: '23',
+        name: 'google-architecture',
+        title: '谷歌浏览器的架构',
+      },
     ],
   },
   {

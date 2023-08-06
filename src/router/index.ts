@@ -45,6 +45,11 @@ const router = createRouter({
           name: 'http-history',
           component: () => import('@/components/network/HttpHistory.vue'),
         },
+        {
+          path: 'google-architecture',
+          name: 'google-architecture',
+          component: () => import('@/components/browser/Architecture.vue'),
+        },
       ],
     },
     {
