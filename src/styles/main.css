@@ -30,6 +30,16 @@ caption{
     margin-top: 8px;
   }
 }
+.copy-wrapper{
+  position: relative;
+}
+.copy-button{
+  position: absolute;
+  right:0;
+  top:0;
+  padding: 4px;
+  border: 2px solid #eee;
+}
 
 a,
 .green {
