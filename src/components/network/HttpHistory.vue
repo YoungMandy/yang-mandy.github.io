@@ -10,7 +10,7 @@ import httpHistoryImg from '@/assets/http-history.png';
       description="http是随着时代的发展,顺应时代的需求而不断的完善的">
     </page-header>
   
-    <img :src="httpHistoryImg" width="900" alt="http发展史">
+    <img :src="httpHistoryImg" width="900" alt="http发展史" loading="eger">
    
   </section>
 </template>
