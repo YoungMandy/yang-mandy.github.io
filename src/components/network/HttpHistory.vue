@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import PageHeader from '@/framework/PageHeader.vue';
-import httpHistoryImg from '@/assets/http-history.png';
+import httpHistoryImg from '@/assets/http-history.svg';
 
 </script>
 <template>
