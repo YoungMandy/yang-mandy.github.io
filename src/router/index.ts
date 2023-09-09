@@ -50,6 +50,12 @@ const router = createRouter({
           name: 'google-architecture',
           component: () => import('@/components/browser/Architecture.vue'),
         },
+        {
+          path: 'git-commitlint',
+          name: 'git-commitlint',
+          component: () =>
+            import('@/components/git-use/CommitLintConfig.vue'),
+        },
       ],
     },
     {

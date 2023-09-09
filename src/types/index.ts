@@ -66,5 +66,16 @@ export const menus = [
         title: 'HTTP发展史',
       },
     ],
+  },{
+    id: '5',
+    name: 'git',
+    title: 'git',
+    children: [
+      {
+        id: '51',
+        name: 'git-commitlint',
+        title: 'git提交校验配置',
+      },
+    ],
   },
 ];
