@@ -66,7 +66,8 @@ export const menus = [
         title: 'HTTP发展史',
       },
     ],
-  },{
+  },
+  {
     id: '5',
     name: 'git',
     title: 'git',
@@ -75,6 +76,23 @@ export const menus = [
         id: '51',
         name: 'git-commitlint',
         title: 'git提交校验配置',
+      },
+    ],
+  },
+  {
+    id: '6',
+    name: 'mobile',
+    title: 'mobile 升级之路',
+    children: [
+      {
+        id: '61',
+        name: 'mobile-issue',
+        title: '爬坑记录',
+      },
+      {
+        id: '62',
+        name: 'mobile-technique',
+        title: '技巧',
       },
     ],
   },

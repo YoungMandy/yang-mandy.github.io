@@ -1,4 +1,4 @@
-import{_ as a}from"./PageHeader.vue_vue_type_script_setup_true_lang-1b7f93c4.js";import{d as c,b as t,c as i,e,w as m,u as o,f as l,g as u}from"./index-2e9baf6e.js";const s=`// github.com/conventional-changelog/commitlint/blob/master/docs/reference-rules.md
+import{_ as a}from"./PageHeader.vue_vue_type_script_setup_true_lang-4e53d9bd.js";import{d as c,b as t,c as i,e,w as m,u as o,f as l,g as u}from"./index-fb9e6e13.js";const s=`// github.com/conventional-changelog/commitlint/blob/master/docs/reference-rules.md
 module.exports = {
   extends: ['@commitlint/config-conventional'],
   rules: {

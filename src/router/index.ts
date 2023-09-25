@@ -53,8 +53,17 @@ const router = createRouter({
         {
           path: 'git-commitlint',
           name: 'git-commitlint',
-          component: () =>
-            import('@/components/git-use/CommitLintConfig.vue'),
+          component: () => import('@/components/git-use/CommitLintConfig.vue'),
+        },
+        {
+          path: 'mobile-issue',
+          name: 'mobile-issue',
+          component: () => import('@/components/mobile-issue/issue.vue'),
+        },
+        {
+          path: 'mobile-technique',
+          name: 'mobile-technique',
+          component: () => import('@/components/mobile-issue/technique.vue'),
         },
       ],
     },
