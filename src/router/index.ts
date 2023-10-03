@@ -26,6 +26,11 @@ const router = createRouter({
           component: () => import('@/components/cssbasic/cssLayout.vue'),
         },
         {
+          path: 'css-technique',
+          name: 'css-technique',
+          component: () => import('@/components/cssbasic/CssTechnique.vue'),
+        },
+        {
           path: 'event-loop',
           name: 'event-loop',
           component: () => import('@/components/browser/EventLoop.vue'),

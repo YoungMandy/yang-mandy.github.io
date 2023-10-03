@@ -4,4 +4,7 @@
   <router-view></router-view>
 </template>
 <style lang="scss" scoped>
+.component_content{
+  font-size: inherit;
+}
 </style>

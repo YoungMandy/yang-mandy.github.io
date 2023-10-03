@@ -54,3 +54,6 @@ a,
   }
 }
 
+img{
+  object-fit: contain;
+}

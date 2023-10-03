@@ -19,6 +19,11 @@ export const menus = [
         name: 'css-layout',
         title: '布局',
       },
+      {
+        id: '14',
+        name: 'css-technique',
+        title: '技巧',
+      },
     ],
   },
   {

@@ -18,9 +18,12 @@ import Content from '@/framework/Content.vue'
 .content{
   flex-grow:1;
   padding:24px;
+  max-height: 100vh;
+  overflow-y: auto;
 }
 .sidebar{
   width: 240px;
+  min-width: 240px;
 }
 
 </style>

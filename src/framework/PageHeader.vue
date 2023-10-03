@@ -16,4 +16,9 @@ defineProps({
     {{ description }} <slot name="description"></slot>
   </p>
 </template>
-<style lang="scss"></style>
+<style lang="scss">
+.page-title {
+  font-size: 16px;
+  font-weight: 500;
+}
+</style>

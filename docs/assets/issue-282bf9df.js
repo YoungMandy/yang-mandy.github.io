@@ -1,4 +1,4 @@
-import{_ as i}from"./PageHeader.vue_vue_type_script_setup_true_lang-4e53d9bd.js";import{d as r,b as n,c as _,e,w as a,f as s,g}from"./index-fb9e6e13.js";const m=s("h3",null,"1.在ios,长按图片可以拖拽",-1),d=s("div",null,"CSS的处理方案",-1),p=s("div",null,"html 的处理方案",-1),l=`
+import{_ as i}from"./PageHeader.vue_vue_type_style_index_0_lang-3466bc3c.js";import{d as r,b as n,c as _,e,w as a,f as s,g}from"./index-83dffbbb.js";const m=s("h3",null,"1.在ios,长按图片可以拖拽",-1),d=s("div",null,"CSS的处理方案",-1),p=s("div",null,"html 的处理方案",-1),l=`
 img {
 -webkit-user-drag: none;
 }
