@@ -83,7 +83,7 @@ const verticalCenterHTML = `
 </script>
 <template>
   <div class="component__css-technique">
-    <a-anchor wrapperClass="right-anchor">
+    <a-anchor wrapperClass="right-anchor" offsetTop="0">
       <a-anchor-link href="#auto-layout" title="1.基于float实现自适应布局" />
       <a-anchor-link
         href="#vertical-align-dialog"
@@ -142,6 +142,11 @@ const verticalCenterHTML = `
         >打开弹窗</a-button
       >
 
+      <ol style="margin-top:20px">实现原理
+        <li>在示例中，由于font-size设置为0,所以x中心点位置就是.container的上边缘，此时，高度100%的宽度为0的伪元素和这个中心点对齐，如果中心点位置不懂，这个伪元素的上一半应该在.container的外面，但是CSS中默认是左上方排列对齐的，所以，伪元素和这个原本在容器上边缘的x中心点一起往下移动规律半个容器高度，也就是此时x中心点就在容器的垂直中心线上</li>
+        <li>弹框元素.dailog也设置了vertical-align:middle。根据定义，弹框的垂直中心位置和x中心位置对齐，此时，x中心点就在容器的垂直中心位置，从而实现了垂直居中效果</li>
+      </ol>
+
       <div
         class="container"
         v-show="!!showVerticalDialog"
@@ -161,11 +166,13 @@ const verticalCenterHTML = `
     right: 0;
   }
   .right-anchor {
+    position: fixed;
+    top:0;
+    right:0;
     margin-top: 24px;
     width: 350px;
     min-width: 350px;
     max-width: 350px;
-    float: right;
     text-align: left;
     border-right: 24px solid transparent;
   }

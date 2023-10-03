@@ -18,7 +18,7 @@ defineProps({
 </template>
 <style lang="scss">
 .page-title {
-  font-size: 16px;
+  font-size: 26px;
   font-weight: 500;
 }
 </style>
