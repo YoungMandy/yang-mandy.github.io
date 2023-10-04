@@ -57,3 +57,13 @@ a,
 img{
   object-fit: contain;
 }
+.mt-1{
+  margin-top: 8px;
+}
+.mt-2{
+  margin-top:16px;
+}
+.mt-3{
+  margin-top: 24px;
+}
+

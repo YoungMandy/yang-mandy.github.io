@@ -11,6 +11,7 @@ import javascript from 'highlight.js/lib/languages/javascript';
 import css from 'highlight.js/lib/languages/css';
 import hljsVuePlugin from '@highlightjs/vue-plugin';
 import CopyWrapper from '@framework/CopyWrapper.vue';
+import HighLight from '@framework/HighLight.vue';
 
 import { VueClipboard } from '@soerenmartius/vue3-clipboard';
 
@@ -25,6 +26,7 @@ app.use(Antd);
 app.use(hljsVuePlugin);
 app.use(VueClipboard);
 app.component('CopyWrapper', CopyWrapper);
+app.component('HighLight', HighLight);
 
 app.mount('#app');
 

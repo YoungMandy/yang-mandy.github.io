@@ -3,7 +3,8 @@ import { message } from 'ant-design-vue'
 defineProps({
   msg: {
     type: String,
-    default:''
+    default: '',
+    required: true
   }
 })
 function onSuccess () {

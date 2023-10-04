@@ -70,6 +70,48 @@ const verticalCenterHTML = `
   <div class="dialog">我劝天公重抖擞，不拘一格降人才</div>
 </div>
 `;
+
+const getScrollWidthCode = `
+.box{
+  width:400px;
+  overflow:scroll
+}
+<div class="box">
+  <div id='in'></div>
+</div>
+
+console.log(400 - document.getElementById("in").clientWidth);
+`
+let scrollBarWidth = ref(0);
+function getScrollWidth () {
+  const dom = document.getElementById("in");
+  if (!dom) {
+    alert('找不到Id为in的DOM元素');
+    return;
+  }
+  const domWidth = dom.clientWidth || 0;
+  scrollBarWidth.value = 400 - domWidth;
+}
+const scrollWithoutShakeCode = `
+html{
+  overflow-y:scroll; //for IE8
+}
+
+:root{ // :root伪元素选择器代表html标签,但是它的优先级比html标签的优先级要高
+  overflow-y:auto;
+  overflow-x:hidden;
+}
+
+:root body{
+  position:absolute;
+}
+
+body{
+  width:100vw;
+  overflow:hidden;
+}
+
+`
 </script>
 <template>
   <div class="component__css-technique">
@@ -78,6 +120,14 @@ const verticalCenterHTML = `
       <a-anchor-link
         href="#vertical-align-dialog"
         title="2.基于vertical-align实现水平垂直居中弹框"
+      />
+      <a-anchor-link
+        href="#get-scroll-width"
+        title="3.获取滚动条宽度"
+      />
+      <a-anchor-link
+        href="#scroll-without-shake"
+        title="4.页面滚动条不发生晃动"
       />
     </a-anchor>
     <section class="main-content">
@@ -180,6 +230,40 @@ const verticalCenterHTML = `
           <a-button @click="showVerticalDialog = false">关闭弹窗</a-button>
         </div>
       </div>
+
+      <h2 id="get-scroll-width">
+        3.获取滚动条宽度
+      </h2>
+
+      <div class="box">
+        <div id='in'></div>
+      </div>
+
+      <div >{{ scrollBarWidth }}</div>
+
+      <a-button @click="getScrollWidth">计算滚动条宽度</a-button>
+
+      <p class="mt-2">mac电脑需要在系统设置=>外观=>始终显示滚动条方可看到效果，否则不显示滚动条，计算结果就一直为0。笔者在2023年10月4日打印结果为15
+      </p>
+
+      <CopyWrapper :msg="getScrollWidthCode">
+        <highlightjs language="html" :code="getScrollWidthCode" />
+      </CopyWrapper>
+
+      <h2 id="scroll-without-shake">
+        4.页面滚动条不发生晃动
+      </h2>
+      <h4>滚动条导致页面晃动的原因</h4>
+      <p>窗体默认是没有滚动条的，而HTML内容是自上而下加载的，就会发生一开始没有滚动条，后来突然出现滚动条的情况，此时页面的可用宽度发生变化，水平居中会重新开始计算，导致页面的发生晃动</p>
+
+      <p>简单粗暴的解决方式是设置html:{ overflow-y:scroll },但是这样会导致页面一都有滚动条</p>
+
+      <high-light>HTML中有两个标签是默认可以产生滚动条的，一个是根元素html,另一个是textarea，因为这俩默认的overflow都不是visible</high-light>
+
+      <CopyWrapper :msg="scrollWithoutShakeCode">
+        <highlightjs language="html" :code="scrollWithoutShakeCode" />
+      </CopyWrapper>
+
     </section>
   </div>
 </template>
@@ -266,5 +350,10 @@ const verticalCenterHTML = `
     border-radius: 16px;
     padding: 24px;
   }
+  .box{
+    width: 400px;
+    overflow: scroll;
+  }
+ 
 }
 </style>

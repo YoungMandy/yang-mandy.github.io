@@ -34,6 +34,9 @@ const htmlDisabledDraggle = `
           :code="htmlDisabledDraggle"
         />
       </CopyWrapper>
+
+      <h3>2.获取窗体滚动高度的方法不同</h3>
+       <p>在PC端，窗体滚动高度可以使用document.documentElement.scrollTop来获取,但是在移动端，可能就要使用document.body.scrollTop来获取</p>
     
       
   </section>
