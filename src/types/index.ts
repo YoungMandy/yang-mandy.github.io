@@ -29,7 +29,7 @@ export const menus = [
   {
     id: '2',
     name: 'browser',
-    title: '浏览器原理',
+    title: '浏览器相关',
     children: [
       {
         id: '21',
@@ -45,6 +45,10 @@ export const menus = [
         id: '23',
         name: 'google-architecture',
         title: '谷歌浏览器的架构',
+      }, {
+        id: '24',
+        name: 'dev-tools',
+        title: '开发者工具使用技巧',
       },
     ],
   },

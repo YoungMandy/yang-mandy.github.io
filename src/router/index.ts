@@ -39,6 +39,10 @@ const router = createRouter({
           path: 'install-listen',
           name: 'install-listen',
           component: () => import('@/components/browser/InstallListen.vue'),
+        },{
+          path: 'dev-tools',
+          name: 'dev-tools',
+          component: () => import('@/components/browser/DevTools.vue'),
         },
         {
           path: 'js-inherit',
