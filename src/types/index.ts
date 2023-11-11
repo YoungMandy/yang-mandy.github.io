@@ -49,6 +49,10 @@ export const menus = [
         id: '24',
         name: 'dev-tools',
         title: '开发者工具使用技巧',
+      }, {
+        id: '25',
+        name: 'web-worker',
+        title: 'Web Worker',
       },
     ],
   },

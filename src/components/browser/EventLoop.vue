@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { eventLoopTest } from '@/components/browser/js/evetLoop.js'
+import { eventLoopTest } from '@/components/browser/js/eventLoop.js'
 import PageHeader from '@/framework/PageHeader.vue';
 </script>
 <template>

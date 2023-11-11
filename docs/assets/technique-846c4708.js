@@ -1,4 +1,4 @@
-import{_ as r}from"./PageHeader.vue_vue_type_style_index_0_lang-6b33ef42.js";import{d as _,b as t,c as i,e,h as o,w as l,f as s,g as p}from"./index-c6e5a36c.js";const m=s("h3",null,"1.点击按钮的反应",-1),h=s("code",null,"transform:scale(0.96)",-1),n=`
+import{_ as r}from"./PageHeader.vue_vue_type_style_index_0_lang-7ecebc81.js";import{d as _,b as t,c as i,e,h as o,w as l,f as s,g as p}from"./index-20761a7a.js";const m=s("h3",null,"1.点击按钮的反应",-1),h=s("code",null,"transform:scale(0.96)",-1),n=`
 .btn-active-animation {
   transform: scale(0.96);
 }

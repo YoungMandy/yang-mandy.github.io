@@ -39,7 +39,8 @@ const router = createRouter({
           path: 'install-listen',
           name: 'install-listen',
           component: () => import('@/components/browser/InstallListen.vue'),
-        },{
+        },
+        {
           path: 'dev-tools',
           name: 'dev-tools',
           component: () => import('@/components/browser/DevTools.vue'),
@@ -58,6 +59,11 @@ const router = createRouter({
           path: 'google-architecture',
           name: 'google-architecture',
           component: () => import('@/components/browser/Architecture.vue'),
+        },
+        {
+          path: 'web-worker',
+          name: 'web-worker',
+          component: () => import('@/components/browser/LearnWebWorker.vue'),
         },
         {
           path: 'git-commitlint',
