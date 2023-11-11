@@ -65,6 +65,7 @@ onMounted(() => {
               <a-input
                 v-model:value="standardBox.border"
                 type="text"
+                style="width:200px"
                 placeholder="border"
                 @change="calculateWidth('standard-box')"
               >
@@ -74,6 +75,7 @@ onMounted(() => {
               <a-input
                 v-model:value="standardBox.padding"
                 type="text"
+                style="width:200px"
                 placeholder="padding"
                 @change="calculateWidth('standard-box')"
               >
@@ -83,6 +85,7 @@ onMounted(() => {
               <a-input
                 v-model:value="standardBox.width"
                 type="text"
+                style="width:200px"
                 placeholder="width"
                 @change="calculateWidth('standard-box')"
               >
@@ -121,6 +124,7 @@ onMounted(() => {
               <a-input
                 v-model:value="ieBox.border"
                 type="text"
+                style="width:200px"
                 placeholder="border"
                 @change="calculateWidth('ie-box')"
               >
@@ -130,6 +134,7 @@ onMounted(() => {
               <a-input
                 v-model:value="ieBox.padding"
                 type="text"
+                style="width:200px"
                 placeholder="padding"
                 @change="calculateWidth('ie-box')"
               >
@@ -139,6 +144,7 @@ onMounted(() => {
               <a-input
                 v-model:value="ieBox.width"
                 type="text"
+                style="width:200px"
                 placeholder="width"
                 @change="calculateWidth('ie-box')"
               >
@@ -192,6 +198,9 @@ $bg-color: rgb(24, 144, 255);
   }
   .ant-form-inline .ant-form-item {
     margin-bottom: 16px;
+  }
+  :deep  .ant-form-item-label{
+    width: 120px;
   }
 }
 </style>
