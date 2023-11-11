@@ -1,0 +1,248 @@
+@import "common.css";
+@import "theme.css";
+
+html,body, #id{
+  margin:0;
+  padding: 0;
+  height:100%
+}
+
+.yn-header{
+  display: flex;
+  align-items:center;
+  justify-content: space-between;  
+  background-color: var(--nav-bg-color)!important;
+}
+
+.yn-header .nav-text{
+  color:var( --nav-text-color);
+}
+.yn-header .user{
+  display: flex;
+  gap:10px;
+}
+.yn-header  .logo{
+  display:flex;
+  gap:20px;
+
+}
+
+.yn-header img{
+  background-color:var( --nav-text-color);;
+  height:30px;
+  width:30px;
+  border-radius: 50%;
+  object-fit:cover;
+  margin-top: 17px;
+}
+
+/*================siderBar===============*/
+.yn-sidebar{
+  padding-top:50px;
+  background-color: var(--side-bg-color)!important;
+}
+
+.yn-sidebar .ant-menu-item{
+  margin:0;
+  padding-right:0 ;
+  width:calc(100%);
+  border-radius: 0;
+}
+.yn-sidebar .ant-menu-light {
+  background-color: var(--side-bg-color)!important;
+}
+.yn-sidebar .ant-menu-item-selected{
+  background-color: var(--side-active-color)!important;
+}
+.yn-sidebar .ant-menu-item-selected .ant-menu-item-icon{
+  color: var(--primary-color)!important;
+}
+
+.yn-sidebar .ant-menu-item-selected .ant-menu-title-content{
+  color:var( --primary-color)!important;
+}
+.yn-sidebar .ant-menu-item-active  .ant-menu-item-icon{
+  color:var(--primary-color)!important;
+}
+.yn-sidebar .ant-menu-title-content {
+  color: var( --side-text-color);
+}
+.yn-sidebar .ant-menu-item-icon {
+  color: var( --side-text-color)!important;
+}
+
+.yn-sidebar .ant-menu-item:hover .ant-menu-title-content{
+  color: var(--primary-color)!important;
+}
+
+.yn-sidebar .collapsed-trigger{
+  position:fixed;
+  left:18px;
+  bottom:18px;
+}
+
+
+/*================设置按钮===============*/
+.fixed-btn{
+  position: fixed;
+  right:0;
+  top: 199px;
+  width: 40px !important;
+  height: 40px;
+  line-height: 20px;
+
+  border-radius: 8px 0px 0px 8px;
+  background-color: rgba(56, 148, 255, 1);
+  color: rgba(16, 16, 16, 1);
+  font-size: 14px;
+  text-align: center;
+}
+
+.fixed-btn .anticon-setting{
+  color:white;
+}
+
+
+/*================paramsGroup组件===============*/
+.param-container{
+  display: flex;
+  flex-direction: column;
+}
+.param-item{
+  display: flex;
+}
+.param-item + .param-item{
+ padding-top:16px;
+}
+.prop-item{
+  width:180px;
+}
+.value-item{
+  margin-left:12px;
+  width:400px
+}
+
+.action-wrapper {
+  display: flex;
+  align-items: center;
+}
+.action-wrapper .action-icon{
+  margin-left:4px;
+}
+.action-wrapper .remove-icon{
+  color:red;
+}
+.action-wrapper .add-icon{
+  color:green;
+}
+
+
+/*================drawer===============*/
+.yn-drawer .navTop{
+  margin-top:64px;
+}
+
+.yn-drawer .ant-drawer-header-title{
+  flex-direction: row-reverse;
+}
+.yn-drawer .ant-drawer-header {
+  border-bottom: none;
+}
+.yn-drawer .yn-drawer-item{
+  margin-bottom: 40px;
+  padding-right:40px;
+  padding-left:16px;
+}
+
+.yn-drawer .yn-drawer-item-title {
+  color:#000;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.yn-drawer .yn-drawer-item-box {
+  display: flex;
+  justify-content: space-between;
+}
+.yn-drawer .color-item {
+ width: 36px;
+ height:36px;
+ border-radius: 5px;
+}
+.yn-drawer .red-bg {
+ background-color:#dc3732;
+}
+.yn-drawer .blue-bg{
+  background-color:#3894ff;
+}
+.yn-drawer .purple-bg{
+background-color:#2f54eb;
+}
+.yn-drawer .img-item{
+width:42px;
+height: 42px;
+border:1px solid #bbbbbb;
+}
+
+.yn-drawer .img-item img{
+  border-radius: 0;
+  width:42px;
+  height:42px;
+  margin-top:0;
+}
+.yn-drawer .switch-item{
+  margin-bottom:16px
+}
+.yn-drawer .switch-item button{
+ margin-left:8px;
+}
+
+/*================scrollList===============*/
+.scroll-container{
+  background-color: white;
+  border: 1px solid #ddd;
+  width:420px;
+  height:400px;
+  overflow: auto;
+  display: flexbox;
+  flex-direction: column;
+  padding:0 16px;
+}
+.scroll-basic-item{
+ padding:6px 0;
+ text-align: left;
+}
+.scroll-basic-item  div{
+  margin-right:8px;
+}
+.scroll-basic-item .content-text{
+  min-width:280px;
+  max-width: 280px;
+  white-space: nowrap;
+  overflow: hidden;
+  width:100%;
+  text-overflow: ellipsis;
+  margin-right:24px;
+}
+.scroll-basic-item .delay-text{
+  color:#ddd;
+}
+
+.viewport {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+.calculate-dom{
+  opacity: 0;
+}
+
+.actual-dom{
+  position: absolute;
+  top:0;
+  bottom:0;
+  width: auto;
+}
+.height-container{
+  margin-bottom:24px;
+  width:200px;
+}

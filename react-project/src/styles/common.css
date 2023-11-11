@@ -1,0 +1,7 @@
+.vertical-direction{
+  flex-direction: column;
+}
+.flex-box{
+  display: flex;
+  align-items: center;
+}

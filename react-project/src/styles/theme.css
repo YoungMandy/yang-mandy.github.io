@@ -1,0 +1,46 @@
+
+#yn-app[theme="blue"] {
+  --primary-color:rgba(56, 148, 255, 1);
+  --nav-bg-color: rgba(16, 16, 16, 1);
+  --nav-text-color:rgba(255, 255, 255, 1);
+  --side-bg-color:rgba(255, 255, 255, 1);
+  --side-text-color:rgba(16, 16, 16, 1);
+  --side-hover-text-color:rgba(230, 247, 255, 1);
+  --side-active-color:rgba(230, 247, 255, 1);;
+  --content-bg-color:rgb(239, 239, 239) 100%;
+  --text-color-primary:rgba(16, 16, 16, 1);
+  --text-color-secondary:rgb(187, 187, 187) 100%;
+}
+
+#yn-app[theme="red"] {
+  --primary-color:#dc3732;
+  --nav-bg-color: rgba(16, 16, 16, 1);
+  --nav-text-color:rgba(255, 255, 255, 1);
+  --side-bg-color:rgba(255, 255, 255, 1);
+  --side-text-color:rgba(16, 16, 16, 1);
+  --side-hover-text-color:rgba(230, 247, 255, 1);
+  --side-active-color:#f8d8d7;
+  --content-bg-color:rgb(239, 239, 239) 100%;
+  --text-color-primary:rgba(16, 16, 16, 1);
+  --text-color-secondary:rgb(187, 187, 187) 100%;
+}
+
+#yn-app[theme="purple"] {
+  --primary-color:#2f54eb;
+  --nav-bg-color: rgba(16, 16, 16, 1);
+  --nav-text-color:rgba(255, 255, 255, 1);
+  --side-bg-color:rgba(255, 255, 255, 1);
+  --side-text-color:rgba(16, 16, 16, 1);
+  --side-hover-text-color:rgba(230, 247, 255, 1);
+  --side-active-color:#ccd4f3;
+  --content-bg-color:rgb(239, 239, 239) 100%;
+  --text-color-primary:rgba(16, 16, 16, 1);
+  --text-color-secondary:rgb(187, 187, 187) 100%;
+}
+
+#yn-app[mode="sideTop"]{
+  --nav-bg-color: rgba(255, 255, 255, 1);
+  --nav-text-color:rgba(16, 16, 16, 1);
+  --side-bg-color:rgba(16, 16, 16, 1);
+  --side-text-color:rgba(255, 255, 255, 1);
+}
