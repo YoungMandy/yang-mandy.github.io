@@ -160,6 +160,7 @@ onMounted(() => {
               'border-width': ieBox.border + 'px',
               width: ieBox.width + 'px',
             }"
+            @click="console.log($event)"
           >
             这是一个测试用的IE盒子
           </div>

@@ -5,6 +5,7 @@ import PageHeader from '@/framework/PageHeader.vue';
   <section class="component__dev-tools">
     <page-header title="Chrome 开发者工具的使用技巧" description="">
     </page-header>
+    <a href="https://developer.chrome.com/docs/devtools/overview">谷歌浏览器官方链接</a>
 
     <h4>1.让非可视区域元素出现在屏幕可视区</h4>
 
