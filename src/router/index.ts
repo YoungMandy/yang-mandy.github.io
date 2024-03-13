@@ -80,12 +80,17 @@ const router = createRouter({
           name: 'mobile-technique',
           component: () => import('@/components/mobile-issue/technique.vue'),
         },
+        {
+          path: 'tree-choose',
+          name: 'tree-choose',
+          component: () => import('@/components/jsbasic/TreeChoose.vue'),
+        },
       ],
     },
     {
       path: '/:pathMatch(.*)*',
       name: 'NotFound',
-      component: NotFound
+      component: NotFound,
     },
   ],
 });

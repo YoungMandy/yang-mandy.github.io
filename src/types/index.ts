@@ -45,11 +45,13 @@ export const menus = [
         id: '23',
         name: 'google-architecture',
         title: '谷歌浏览器的架构',
-      }, {
+      },
+      {
         id: '24',
         name: 'dev-tools',
         title: '开发者工具使用技巧',
-      }, {
+      },
+      {
         id: '25',
         name: 'web-worker',
         title: 'Web Worker',
@@ -65,6 +67,11 @@ export const menus = [
         id: '31',
         name: 'js-inherit',
         title: '继承',
+      },
+      {
+        id: '32',
+        name: 'tree-choose',
+        title: '树选择',
       },
     ],
   },
