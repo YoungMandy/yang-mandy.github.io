@@ -68,11 +68,6 @@ export const menus = [
         name: 'js-inherit',
         title: '继承',
       },
-      {
-        id: '32',
-        name: 'tree-choose',
-        title: '树选择',
-      },
     ],
   },
   {

@@ -35,6 +35,7 @@ const flex = reactive({
     },
   },
 });
+
 let flexParentStyle: any = computed(() => ({
   'justify-content': flex.parent.justifyContent,
   'align-items': flex.parent.alignItems,

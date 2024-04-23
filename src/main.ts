@@ -1,6 +1,7 @@
 import './styles/main.css'
 
 import { createApp } from 'vue'
+// APP是根组件
 import App from './App.vue'
 import router from './router'
 import Antd from 'ant-design-vue';
@@ -18,7 +19,12 @@ import { VueClipboard } from '@soerenmartius/vue3-clipboard';
 hljs.registerLanguage('javascript', javascript);
 hljs.registerLanguage('css', css);
 
-const app = createApp(App)
+// 从这里开始创建Vue的应用实例
+const app = createApp(App);
+app.config.errorHandler = (err) => {
+  /* 处理错误 */
+  console.error('app.config的报错', err);
+};
 
 app.use(router);
 app.use(Antd);

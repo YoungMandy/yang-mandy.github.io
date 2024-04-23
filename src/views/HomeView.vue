@@ -17,7 +17,7 @@ import Content from '@/framework/Content.vue'
 }
 .content{
   flex-grow:1;
-  padding:24px;
+  padding:24px 36px;
   max-height: 100vh;
   overflow-y: auto;
  

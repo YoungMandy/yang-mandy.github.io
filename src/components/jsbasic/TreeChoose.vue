@@ -77,6 +77,7 @@ const onExpand = (keys: string[]) => {
 };
 
 watch(searchValue, (value) => {
+  debugger
   const expanded = dataList
     .map((item: TreeDataItem) => {
       if ((item.title as string).indexOf(value) > -1) {
@@ -123,4 +124,5 @@ function filterTreeNode (node:TreeDataItem) {
     </a-tree>
   </section>
 </template>
-<style></style>
+<style>
+</style>

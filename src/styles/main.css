@@ -69,4 +69,6 @@ img{
 li +li{
   margin-top:6px;
 }
-
+.copy-wrapper{
+  margin:24px 0;
+}

@@ -1,15 +1,8 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router';
-// import Header from './src/framework/Header.vue';
-import { onMounted, ref } from 'vue';
-import { setTimeout } from 'timers/promises';
-const technologyStack = ref('vue');
-function onTechnologyStackChange(name: string) {
-  technologyStack.value = name;
-}
+import { RouterView } from 'vue-router';
 
 
-    console.log('first-paint', performance.getEntriesByName('first-paint'));
+  console.log('first-paint', performance.getEntriesByName('first-paint'));
   console.log(
     'first-contentful-paint',
     performance.getEntriesByName('first-contentful-paint')
@@ -23,17 +16,7 @@ function onTechnologyStackChange(name: string) {
 </script>
 
 <template>
-  <header>
-    <!-- <Header @changeTech="onTechnologyStackChange"></Header>   s -->
-  </header>
-  <RouterView v-if="technologyStack === 'vue'" />
-  <iframe
-    class="react-container"
-    width="100%"
-    v-if="technologyStack === 'react'"
-    seamless
-    src="https://youngmandy.github.io/react-docs/index.html"
-  ></iframe>
+  <RouterView  />
 </template>
 
 <style scoped>

@@ -112,24 +112,32 @@ body{
 }
 
 `
+
+function scrollTo (id: string) {
+  debugger
+  const dom = document.querySelector(`#${id}`);
+  if (dom) {
+    dom.scrollIntoView();
+  }
+}
 </script>
 <template>
   <div class="component__css-technique">
-    <a-anchor wrapperClass="right-anchor" offsetTop="0">
-      <a-anchor-link href="#auto-layout" title="1.基于float实现自适应布局" />
-      <a-anchor-link
-        href="#vertical-align-dialog"
+    <div wrapperClass="right-anchor" :offsetTop="0">
+      <div  title="1.基于float实现自适应布局" @click="scrollTo('auto-layout')"/>
+      <div
+        @click="scrollTo('vertical-align-dialog')"
         title="2.基于vertical-align实现水平垂直居中弹框"
       />
-      <a-anchor-link
-        href="#get-scroll-width"
+      <div
+      @click="scrollTo('get-scroll-width')"
         title="3.获取滚动条宽度"
       />
-      <a-anchor-link
-        href="#scroll-without-shake"
+      <div
+      @click="scrollTo('scroll-without-shake')"
         title="4.页面滚动条不发生晃动"
       />
-    </a-anchor>
+    </div>
     <section class="main-content">
       <page-header title="css的技巧"> </page-header>
 
@@ -274,6 +282,7 @@ body{
   }
   .right-anchor {
     position: fixed;
+
     top:0;
     right:0;
     margin-top: 24px;
