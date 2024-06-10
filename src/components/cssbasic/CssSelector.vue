@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import PageHeader from '@/framework/PageHeader.vue';
+
 </script>
 <template>
   <section class="component__css-selector">

@@ -4,7 +4,7 @@ import LayoutTable from '@/components/cssbasic/components/LayoutTable.vue';
 import LayoutFloat from '@/components/cssbasic/components/LayoutFloat.vue';
 import LayoutFlex from '@/components/cssbasic/components/LayoutFlex.vue';
 import LayoutGrid from '@/components/cssbasic/components/LayoutGrid.vue';
-import PageHeader from '@/framework/PageHeader.vue';
+
 
 let activeKey = ref('table');
 const onLayoutTableAdd = (item: any) => {

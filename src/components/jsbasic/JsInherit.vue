@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import PageHeader from '@/framework/PageHeader.vue';
+
 import {
   prototypeChainInheritString,
   constructorFunctionInheritString,

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import PageHeader from '@/framework/PageHeader.vue';
+
 let showVerticalDialog = ref(false);
 const autoAdaptHtml = `
 <div class="father">

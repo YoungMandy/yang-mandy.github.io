@@ -18,6 +18,7 @@
     "@highlightjs/vue-plugin": "^2.1.0",
     "@soerenmartius/vue3-clipboard": "^0.1.2",
     "ant-design-vue": "4.x",
+    "echarts": "^5.5.0",
     "highlight.js": "^11.8.0",
     "sass": "^1.63.5",
     "vue": "^3.3.4",

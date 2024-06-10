@@ -80,7 +80,11 @@ const router = createRouter({
           name: 'mobile-technique',
           component: () => import('@/components/mobile-issue/technique.vue'),
         },
-       
+        {
+          path: 'echarts-entry',
+          name: 'echarts-entry',
+          component: () => import('@/components/echarts/echarts-entry.vue'),
+        },
       ],
     },
     {

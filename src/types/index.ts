@@ -111,4 +111,16 @@ export const menus = [
       },
     ],
   },
+  {
+    id: '7',
+    name: 'echarts',
+    title: 'echarts',
+    children: [
+      {
+        id: '71',
+        name: 'echarts-entry',
+        title: 'echarts入门',
+      },
+    ],
+  },
 ];
