@@ -1,4 +1,4 @@
-import{d as l,b as e,c,e as d,f as o,h as p,w as g,u as t,W as u,g as n}from"./index-8f12c227.js";const x="/assets/event-loop-b5282121.svg",a=`
+import{d as l,b as e,c,e as d,f as o,h as p,w as g,u as t,W as u,g as n}from"./index-2da9ee8b.js";const x="/assets/event-loop-b5282121.svg",a=`
   // 研究事件循环的代码
   // 竞态问题，又叫竞态条件(race condition),
   //它出现的原因是无法保证异步操作不一定会按他们开始的顺序执行,下面是可以用闭包做上一次异步请求的过期标识

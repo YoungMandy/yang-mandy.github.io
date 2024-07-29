@@ -1,6 +1,17 @@
 <script setup lang="ts">
+import { onMounted } from 'vue';
 
 import httpHistoryImg from '@/assets/http-history.svg';
+
+onMounted(() => {
+   window.onbeforeunload = (e) => {
+    const event = e || window.event;
+    event.preventDefault();
+    event.returnValue = false;
+  
+    return '';
+  }
+})
 
 </script>
 <template>

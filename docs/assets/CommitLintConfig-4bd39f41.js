@@ -1,4 +1,4 @@
-import{d as r,b as t,c,e as i,f as e,_ as l,w as m,u as o,g as u}from"./index-8f12c227.js";const s=`// github.com/conventional-changelog/commitlint/blob/master/docs/reference-rules.md
+import{d as r,b as t,c,e as i,f as e,_ as l,w as m,u as o,g as u}from"./index-2da9ee8b.js";const s=`// github.com/conventional-changelog/commitlint/blob/master/docs/reference-rules.md
 module.exports = {
   extends: ['@commitlint/config-conventional'],
   rules: {
