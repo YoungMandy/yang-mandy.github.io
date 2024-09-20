@@ -1,5 +1,10 @@
 {
   "files": [],
+  "compilerOptions": {
+    // 其他编译选项...
+    "allowJs": true,
+    // 其他编译选项...
+  },
   "references": [
     {
       "path": "./tsconfig.node.json"

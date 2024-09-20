@@ -1,28 +1,34 @@
 <script setup lang="ts">
+export interface WorkerItem{
+  postMessage: (data?: any) => void;
+  onmessage: (data?: any) => void;
+  onerror: (data?: any) => void;
+  terminate: (data?: any) => void;
+}
 import { ref, reactive } from 'vue';
 
 let worker = ref<any>(null);
 
 function createWebWorker() {
-  worker = new Worker(new URL('./js/learnWebWorker.js', import.meta.url));
+  worker.value = new Worker(new URL('./js/learnWebWorker.js', import.meta.url));
 
   // console.log('worker.value', worker.value);
   // const el = document.querySelector('.page-description');
   // worker.postMessage([numberList,el]);// postMessage传递的内容不能是DOM
 
-  worker.postMessage(form.num);
+  worker.value.postMessage(form.num);
  
   form.workerReceive = JSON.stringify(form.num);
 
 
-  worker.onmessage = (event: Event) => {
+  worker.value.onmessage = (event: Event) => {
     console.log('worker.onmessage:', event);
     form.workerResponse = JSON.stringify((event as any).data);
     form.mainReceive = JSON.stringify((event as any).data);
   };
-  worker.onerror = (event: Event) => {
+  worker.value.onerror = (event: Event) => {
     console.log('worker.onerror:', event);
-    worker.terminate(); // 终止web worker
+    worker.value.terminate(); // 终止web worker
   };
 }
 
@@ -74,7 +80,7 @@ const form = reactive({
 });
 const destroyWebWorker = () => {
   if (worker.value) {
-    worker.terminate();
+    worker.value.terminate();
   }
 }
 

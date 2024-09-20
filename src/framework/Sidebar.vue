@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref ,onMounted} from 'vue'
 
-import { menus } from '@/types/index';
+import { menus } from '@/config/menu';
 import router from '@/router';
 const openKeys = ref<string[]>(['css-basic']);
 const selectedKeys = ref<string[]>(['box-sizing']);

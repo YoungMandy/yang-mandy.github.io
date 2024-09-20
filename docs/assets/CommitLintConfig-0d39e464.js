@@ -1,4 +1,4 @@
-import{d as r,b as t,c,e as i,f as e,_ as l,w as m,u as o,g as u}from"./index-2da9ee8b.js";const s=`// github.com/conventional-changelog/commitlint/blob/master/docs/reference-rules.md
+import{d as c,b as o,c as i,e as l,f as e,_ as m,g as u,w as p,u as s}from"./index-fccd2042.js";const n=`// github.com/conventional-changelog/commitlint/blob/master/docs/reference-rules.md
 module.exports = {
   extends: ['@commitlint/config-conventional'],
   rules: {
@@ -29,4 +29,4 @@ module.exports = {
     'subject-case': [0] // 不校验 subject的格式
   }
 };
-`,p=u("h2",null,"commitlint的配置",-1),_=r({__name:"CommitLintConfig",setup(d){return(g,f)=>{const n=t("highlightjs"),a=t("CopyWrapper");return c(),i("section",null,[e(l,{title:"git 提交的检测配置",description:"git 提交一般用commitLint插件,这个插件建议用下面的配置"}),p,e(a,{msg:o(s)},{default:m(()=>[e(n,{language:"javascript",code:o(s)},null,8,["code"])]),_:1},8,["msg"])])}}});export{_ as default};
+`,b=c({__name:"CommitLintConfig",setup(d){return(g,t)=>{const r=o("highlightjs"),a=o("CopyWrapper");return i(),l("section",null,[e(m,{title:"git 提交的检测配置",description:"git 提交一般用commitLint插件,这个插件建议用下面的配置"}),t[0]||(t[0]=u("h2",null,"commitlint的配置",-1)),e(a,{msg:s(n)},{default:p(()=>[e(r,{language:"javascript",code:s(n)},null,8,["code"])]),_:1},8,["msg"])])}}});export{b as default};

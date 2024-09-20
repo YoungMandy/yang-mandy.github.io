@@ -56,6 +56,11 @@ const router = createRouter({
           component: () => import('@/components/network/HttpHistory.vue'),
         },
         {
+          path: 'https',
+          name: 'https',
+          component: () => import('@/components/network/https/https.vue'),
+        },
+        {
           path: 'google-architecture',
           name: 'google-architecture',
           component: () => import('@/components/browser/Architecture.vue'),
