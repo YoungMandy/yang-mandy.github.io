@@ -11,6 +11,7 @@ import javascript from 'highlight.js/lib/languages/javascript';
 import css from 'highlight.js/lib/languages/css';
 import hljsVuePlugin from '@highlightjs/vue-plugin';
 import CopyWrapper from '@/framework/CopyWrapper.vue';
+import MarkdownWrapper from '@/framework/MarkdownWrapper.vue';
 import HighLight from '@/framework/HighLight.vue';
 import PageHeader from '@/framework/PageHeader.vue';
 import MarkdownIt from 'markdown-it';
@@ -53,5 +54,6 @@ app.use(VueClipboard);
 app.component('CopyWrapper', CopyWrapper);
 app.component('HighLight', HighLight);
 app.component('PageHeader', PageHeader);
+app.component('MarkdownWrapper', MarkdownWrapper);
 
 app.mount('#app');

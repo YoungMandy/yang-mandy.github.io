@@ -1,4 +1,4 @@
-import{r as t,o as a,ac as o,b as i,c as s,e as T,f as c,g as d}from"./index-5125de2f.js";const p=`## 前言
+import{r,b as t,c as a,e as T,f as o}from"./index-5be45337.js";const i=`## 前言
 大家好，我是抹茶，今天来研究一下为什么是我们需要HTTPS以及HTTP是如何演变成HTTPS的。
 
 
@@ -85,4 +85,4 @@ CA生成的签名过程如下：
 
 
 
-`,H=["innerHTML"],l={__name:"https",setup(j){const e=t("");return a(()=>{const n=o();n.proxy.$markdown?e.value=n.proxy.$markdown.render(p):console.error("Markdown renderer is not available on the component instance"),console.log("$markdown",this)}),(n,m)=>{const r=i("page-header");return s(),T("section",null,[c(r,{title:"为什么我们需要Https",description:""}),d("div",{innerHTML:e.value},null,8,H)])}}};export{l as default};
+`,j={__name:"https",setup(c){const n=r(i);return(s,d)=>{const e=t("markdown-Wrapper");return a(),T("section",null,[o(e,{title:"为什么我们需要Https",description:"",content:n.value},null,8,["content"])])}}};export{j as default};

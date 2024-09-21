@@ -24,13 +24,16 @@ import Content from '@/framework/Content.vue'
   display: flex;
   align-items: flex-start;
   justify-content: center;
-   max-height: 100vh;
+  max-height: 100vh;
   overflow-y: auto;
 }
 
 .content{
-  width:1000px;
+  max-width:1000px;
+  
+  width: 100%;
   padding:12px 36px;
+ 
  
 }
 
