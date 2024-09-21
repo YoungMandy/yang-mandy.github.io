@@ -1,5 +1,11 @@
 /// <reference types="vite/client" />
+export {};
 
+declare module 'vue' {
+  interface ComponentCustomProperties {
+    $markdown: any;
+  }
+}
 declare module '*.vue' {
   import { DefineComponent } from 'vue';
   const component: DefineComponent<{}, {}, any>;

@@ -4,6 +4,7 @@
   margin: 0 auto;
   font-weight: normal;
   height: 100%;
+  font-family: Quotes, -apple-system, "system-ui";
 }
 code {
   display: inline-block;
@@ -16,6 +17,10 @@ pre{
   background-color: #f5f2f0;
   border:2px solid #eee;
   border-radius: 4px;
+}
+
+pre > code {
+  background: none;
 }
 caption{
   display: block;
@@ -71,4 +76,17 @@ li +li{
 }
 .copy-wrapper{
   margin:24px 0;
+}
+p{
+  line-height: 30px;
+}
+h1,h2,h3,h4,h5,h6{
+  line-height: 72px;
+  font-weight: 500;
+}
+h3,h4{
+line-height: 64px;
+}
+h5,h6{
+line-height: 48px;
 }

@@ -300,7 +300,7 @@ function scrollTo (id: string) {
   }
 
   .main-content {
-    margin-right: 370px;
+    /* margin-right: 370px; */
   }
 
   margin-left: 24px;

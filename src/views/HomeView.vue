@@ -6,7 +6,10 @@ import Content from '@/framework/Content.vue'
 <template>
   <main class="page__home">
     <sidebar class="sidebar"/>
-    <content class="content"/>
+    <div class="content-wrapper">
+        <content class="content"/>
+    </div>
+  
   </main>
 </template>
 
@@ -15,16 +18,24 @@ import Content from '@/framework/Content.vue'
   display:flex;
   height:100%;
 }
-.content{
-  flex-grow:1;
-  padding:24px 36px;
-  max-height: 100vh;
+
+.content-wrapper{
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+   max-height: 100vh;
   overflow-y: auto;
+}
+
+.content{
+  width:1000px;
+  padding:12px 36px;
  
 }
+
 .sidebar{
-  width: 240px;
-  min-width: 240px;
+  
 }
 
 </style>
