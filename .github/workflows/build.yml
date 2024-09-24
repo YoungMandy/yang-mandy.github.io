@@ -19,19 +19,15 @@ jobs:
       with:
         node-version: '18'
 
-
-
     - name: Install and Build
       run: |
           yarn 
           yarn build
 
     - name: Deploy to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@3.6.2
+      uses: actions/deploy-pages@v4
       with:
         personal_token: ${{ secrets.GH_PAT }}
-        branch: master
-        folder: docs # npm run build-storybook输出的文件夹
 
 
 
