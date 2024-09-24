@@ -19,6 +19,9 @@ jobs:
       with:
         node-version: '18'
 
+    - name: List files
+      run: ls -R
+
     - name: Install dependencies
       run: yarn 
 
