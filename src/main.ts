@@ -25,7 +25,7 @@ hljs.registerLanguage('css', css);
 const app = createApp(App);
 app.config.errorHandler = (err) => {
   /* 处理错误 */
-  console.error('app.config的报错', err);
+  console.error('app.config.errorHandler的报错', err);
 };
 
 app.config.globalProperties.$markdown = new markdownit({
