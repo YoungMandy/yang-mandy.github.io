@@ -21,11 +21,13 @@ jobs:
 
 
 
-    - name: Install dependencies
-      run: yarn 
+    - name: Install and Build
+      run: |
+          yarn 
+          yarn build
 
     - name: Build the project
-      run: yarn build
+      run: 
 
     - name: List files
       run: ls -R
@@ -40,7 +42,7 @@ jobs:
       with:
         personal_token: ${{ secrets.GH_PAT }}
         publish_dir: ./docs
-        branch: master
+        branch: gh-pages
         # 推送哪个文件里的内容
         folder: docs
         # 是否强制提交
