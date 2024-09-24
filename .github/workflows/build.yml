@@ -30,6 +30,4 @@ jobs:
       with:
         personal_token: ${{ secrets.GH_PAT }}
         publish_dir: ./docs
-env:
-  ACTIONS_RUNNER_DEBUG: true
-  ACTIONS_STEP_DEBUG: true
+
