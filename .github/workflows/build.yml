@@ -29,9 +29,9 @@ jobs:
 
     - name: List files
       run: ls -R
-      
+
     - name: Upload build artifacts
-      uses: actions/upload-pages-artifact@v1
+      uses: actions/upload-pages-artifact@v3
       with:
         path: ./docs  # 这里是构建输出目录
 
