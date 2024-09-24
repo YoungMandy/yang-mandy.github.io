@@ -1,6 +1,6 @@
 name: Deploy to GitHub Pages
 
-# 触发条件：每次 push 到 main 分支时触发
+# 触发条件：每次 push 到 master 分支时触发
 on:
   push:
     branches:
@@ -29,7 +29,7 @@ jobs:
       uses: peaceiris/actions-gh-pages@v4
       with:
         personal_token: ${{ secrets.GH_PAT }}
-        publish_dir: ./docs
+        publish_dir: ../../docs
 env:
   ACTIONS_RUNNER_DEBUG: true
   ACTIONS_STEP_DEBUG: true

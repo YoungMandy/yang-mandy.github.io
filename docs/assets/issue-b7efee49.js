@@ -1,4 +1,4 @@
-import{d as p,b as l,c as d,e as i,f as o,g as t,w as r}from"./index-36f5477c.js";const a=`
+import{d as p,b as l,c as d,e as i,f as o,g as t,w as r}from"./index-34c4b048.js";const a=`
 img {
 -webkit-user-drag: none;
 }
