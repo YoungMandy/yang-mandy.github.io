@@ -26,28 +26,12 @@ jobs:
           yarn 
           yarn build
 
-    - name: Build the project
-      run: 
-
-    - name: List files
-      run: ls -R
-
-    - name: Upload build artifacts
-      uses: actions/upload-pages-artifact@v3
-      with:
-        path: ./docs  # 这里是构建输出目录
-
     - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v4
+      uses: JamesIves/github-pages-deploy-action@3.6.2
       with:
         personal_token: ${{ secrets.GH_PAT }}
-        publish_dir: ./docs
-        branch: gh-pages
-        # 推送哪个文件里的内容
-        folder: docs
-        # 是否强制提交
-        force: true
-        # 提交时候的 commit 消息
-        commit-message: website deploy
+        branch: master
+        folder: docs # npm run build-storybook输出的文件夹
+
 
 
