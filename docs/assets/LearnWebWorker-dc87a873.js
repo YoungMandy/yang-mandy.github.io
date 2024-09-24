@@ -1,4 +1,4 @@
-import{d as y,r as R,a as j,b as u,c as x,e as S,g as r,h as s,f as o,w as t,j as M}from"./index-5be45337.js";const N="/assets/web_worker_export_error-fb135a28.png",U={class:"component__learn-web-worker"},C={class:"demo-container"},g=`
+import{d as y,r as R,a as j,b as u,c as x,e as S,g as r,h as s,f as o,w as t,j as M}from"./index-8bc5b620.js";const N="/assets/web_worker_export_error-fb135a28.png",U={class:"component__learn-web-worker"},C={class:"demo-container"},g=`
 // 在主线程中创建WebWorker,并传递参数
 function createWebWorker () {
   worker = new Worker(new URL('./js/learnWebWorker.js', import.meta.url));

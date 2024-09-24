@@ -1,4 +1,4 @@
-import{d as T,r as f,b as r,c as W,e as $,g as l,f as o,w as a,k as I,i as p,h as v,bL as V,bC as q,u as c,t as j,j as z}from"./index-5be45337.js";import{_ as h}from"./layout-grid-89df1300.js";const D="/assets/text_arround-e34f72d7.png",E={class:"component__css-technique"},H={wrapperClass:"right-anchor",offsetTop:0},L={class:"main-content"},M={class:"dialog"},w=`
+import{d as T,r as f,b as r,c as W,e as $,g as l,f as o,w as a,k as I,i as p,h as v,bL as V,bC as q,u as c,t as j,j as z}from"./index-8bc5b620.js";import{_ as h}from"./layout-grid-89df1300.js";const D="/assets/text_arround-e34f72d7.png",E={class:"component__css-technique"},H={wrapperClass:"right-anchor",offsetTop:0},L={class:"main-content"},M={class:"dialog"},w=`
 <div class="father">
   <img src="@/assets/layout-grid.png"/>
   <p class="animal">

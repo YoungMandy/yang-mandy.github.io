@@ -14,7 +14,7 @@ import CopyWrapper from '@/framework/CopyWrapper.vue';
 import MarkdownWrapper from '@/framework/MarkdownWrapper.vue';
 import HighLight from '@/framework/HighLight.vue';
 import PageHeader from '@/framework/PageHeader.vue';
-import MarkdownIt from 'markdown-it';
+import markdownit from 'markdown-it';
 
 import { VueClipboard } from '@soerenmartius/vue3-clipboard';
 
@@ -28,11 +28,11 @@ app.config.errorHandler = (err) => {
   console.error('app.config的报错', err);
 };
 
-app.config.globalProperties.$markdown = new MarkdownIt({
+app.config.globalProperties.$markdown = new markdownit({
   html: true,
   linkify: true,
   typographer: true,
-  highlight: function (str, lang) {
+  highlight: function (str:string, lang:string) {
     if (lang && hljs.getLanguage(lang)) {
       try {
         return hljs.highlight(lang, str).value;
