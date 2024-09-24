@@ -6,6 +6,7 @@ on:
     branches:
       - master
 permissions:
+  pages: write  # 赋予写入 GitHub Pages 的权限
   contents: write
   id-token: write
 
