@@ -1,4 +1,4 @@
-import{d as r,b as t,c,e as p,g as s,f as n,w as g,u as l}from"./index-239daa6b.js";const i=`
+import{d as r,b as t,c,e as p,g as s,f as n,w as g,u as l}from"./index-121a046d.js";const i=`
   const installEvent = () => {
     let list = [];
     function trigger(key, ...rest) {
