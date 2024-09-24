@@ -1,4 +1,4 @@
-import{d as m,b as a,c as f,e as y,f as e,g as o,w as r,u as n}from"./index-8bc5b620.js";const c=`// 1.原型链继承
+import{d as m,b as a,c as f,e as y,f as e,g as o,w as r,u as n}from"./index-36f5477c.js";const c=`// 1.原型链继承
 function Parent () {
   this.name = 'parent'
 }
