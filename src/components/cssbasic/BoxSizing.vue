@@ -48,7 +48,7 @@ onMounted(() => {
 
 <template>
   <section class="component__box-sizing">
-    <page-header title="css的盒模型加油">
+    <page-header title="css的盒模型加油啊">
       <template v-slot:description>
         css的盒模型主要分为两种,通常称为IE盒模型和标准盒模型。他们的区别在于width设置的宽度的作用范围不同,通过css样式<code>box-sizing</code>控制
       </template>
