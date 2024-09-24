@@ -13,26 +13,13 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
-      with:
-        ref: master
-        submodules: recursive
-        repository: YoungMandy/youngmandy.github.io
-        token: ***
-        ssh-strict: true
-        ssh-user: git
-        persist-credentials: true
-        clean: true
-        sparse-checkout-cone-mode: true
-        fetch-depth: 1
-        fetch-tags: false
-        show-progress: true
-        lfs: false
-        set-safe-directory: true
 
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
         node-version: '18'
+
+
 
     - name: Install dependencies
       run: yarn 
@@ -46,18 +33,11 @@ jobs:
     - name: Upload build artifacts
       uses: actions/upload-pages-artifact@v3
       with:
-        path: ./docs/_site
-        name: github-pages
-        retention-days: 1
+        path: ./docs  # 这里是构建输出目录
 
     - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v4        
+      uses: peaceiris/actions-gh-pages@v4
       with:
         personal_token: ${{ secrets.GH_PAT }}
         publish_dir: ./docs
-        timeout: 600000
-        error_count: 10
-        reporting_interval: 5000
-        artifact_name: github-pages
-        preview: false
 
